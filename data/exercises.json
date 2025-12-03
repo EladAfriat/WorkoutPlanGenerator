@@ -1,0 +1,2806 @@
+{
+  "exercises": {
+    "Push-ups": {
+      "prerequisites": [],
+      "level": "beginner",
+      "equipment": [],
+      "muscle": "chest",
+      "instructions": [
+        "Start in plank position with hands slightly wider than shoulder-width",
+        "Keep your body in a straight line from head to heels",
+        "Lower your body until chest nearly touches the floor",
+        "Push back up to starting position",
+        "Keep core engaged throughout the movement"
+      ],
+      "tips": [
+        "Keep your elbows at a 45-degree angle to your body",
+        "Don't let your hips sag or pike up",
+        "Breathe out as you push up, breathe in as you lower down",
+        "Start with knees on floor if full push-ups are too difficult"
+      ],
+      "common_mistakes": [
+        "Flaring elbows out too wide (can cause shoulder pain)",
+        "Not going low enough (chest should nearly touch floor)",
+        "Arching or sagging the back (keep core tight)"
+      ],
+      "video": "https://www.youtube.com/watch?v=IODxDxX7oi4"
+    },
+    "Incline Push-ups": {
+      "prerequisites": [],
+      "level": "beginner",
+      "equipment": [],
+      "muscle": "chest",
+      "video": "https://www.youtube.com/watch?v=IODxDxX7oi4",
+      "instructions": [
+        "Place hands on elevated surface (bench, table, or wall)",
+        "Position hands slightly wider than shoulder-width",
+        "Keep body in straight line from head to heels",
+        "Lower chest toward the surface",
+        "Push back up to starting position"
+      ],
+      "tips": [
+        "Higher surface = easier exercise",
+        "Great progression before regular push-ups",
+        "Keep core engaged throughout",
+        "Control the movement - don't rush"
+      ],
+      "common_mistakes": [
+        "Arching or sagging the back",
+        "Not going low enough",
+        "Hands too close together"
+      ]
+    },
+    "Wide Push-ups": {
+      "prerequisites": [],
+      "level": "beginner",
+      "equipment": [],
+      "muscle": "chest",
+      "video": "https://www.youtube.com/watch?v=IODxDxX7oi4",
+      "instructions": [
+        "Start in plank position",
+        "Place hands wider than shoulder-width (about 1.5x)",
+        "Keep body straight from head to heels",
+        "Lower body until chest nearly touches floor",
+        "Push back up to starting position"
+      ],
+      "tips": [
+        "Wider grip targets chest more",
+        "Keep elbows at comfortable angle",
+        "Don't go too wide (can strain shoulders)",
+        "Focus on chest contraction"
+      ],
+      "common_mistakes": [
+        "Hands too wide (can cause shoulder pain)",
+        "Not maintaining straight body line",
+        "Elbows flaring out excessively"
+      ]
+    },
+    "Decline Push-ups": {
+      "prerequisites": [],
+      "level": "intermediate",
+      "equipment": [],
+      "muscle": "chest",
+      "video": "https://www.youtube.com/watch?v=IODxDxX7oi4",
+      "instructions": [
+        "Place feet on elevated surface (bench or step)",
+        "Hands on floor, slightly wider than shoulder-width",
+        "Keep body in straight line",
+        "Lower chest toward floor",
+        "Push back up explosively"
+      ],
+      "tips": [
+        "Higher feet = more difficult",
+        "Great for targeting upper chest",
+        "Keep core extra tight",
+        "Control the descent"
+      ],
+      "common_mistakes": [
+        "Hips sagging (keep body straight)",
+        "Head dropping forward",
+        "Not going low enough"
+      ]
+    },
+    "Dumbbell Press": {
+      "prerequisites": [
+        "Push-ups"
+      ],
+      "level": "intermediate",
+      "equipment": [
+        "dumbbells"
+      ],
+      "muscle": "chest",
+      "video": "https://www.youtube.com/watch?v=VmB1G1K7v94",
+      "instructions": [
+        "Lie on bench with dumbbells at shoulder level",
+        "Palms facing forward, elbows at 90 degrees",
+        "Press dumbbells straight up until arms extended",
+        "Lower with control back to shoulders",
+        "Keep core engaged throughout"
+      ],
+      "tips": [
+        "Control the weight on descent",
+        "Keep wrists straight",
+        "Don't arch back excessively",
+        "Use full range of motion"
+      ],
+      "common_mistakes": [
+        "Bouncing weights off chest",
+        "Arching back too much",
+        "Not controlling the descent",
+        "Flaring elbows too wide"
+      ]
+    },
+    "Chest Fly": {
+      "prerequisites": [
+        "Push-ups"
+      ],
+      "level": "intermediate",
+      "equipment": [
+        "dumbbells"
+      ],
+      "muscle": "chest",
+      "video": "https://www.youtube.com/watch?v=eozdVDA78K0",
+      "instructions": [
+        "Lie on bench with dumbbells extended above chest",
+        "Slight bend in elbows (don't lock out)",
+        "Lower dumbbells in wide arc until chest stretch",
+        "Bring dumbbells back together above chest",
+        "Squeeze chest at the top"
+      ],
+      "tips": [
+        "Keep slight bend in elbows throughout",
+        "Focus on chest stretch and contraction",
+        "Control the movement - don't rush",
+        "Use lighter weight than press"
+      ],
+      "common_mistakes": [
+        "Straightening arms completely",
+        "Going too heavy (form breaks down)",
+        "Not feeling chest stretch",
+        "Dropping weights too fast"
+      ]
+    },
+    "Cable Chest Fly": {
+      "prerequisites": [
+        "Dumbbell Press"
+      ],
+      "level": "advanced",
+      "equipment": [
+        "cable machine"
+      ],
+      "muscle": "chest",
+      "video": "https://www.youtube.com/watch?v=IodlxX8oiy4",
+      "instructions": [
+        "Set cable pulleys at shoulder height",
+        "Stand between pulleys, grab handles",
+        "Start with arms extended to sides",
+        "Bring handles together in front of chest",
+        "Squeeze chest, then return with control"
+      ],
+      "tips": [
+        "Keep slight bend in elbows",
+        "Constant tension from cables",
+        "Focus on chest contraction",
+        "Control the return movement"
+      ],
+      "common_mistakes": [
+        "Using too much momentum",
+        "Straightening arms completely",
+        "Not controlling the return",
+        "Leaning forward too much"
+      ]
+    },
+    "Bench Press": {
+      "prerequisites": [
+        "Dumbbell Press"
+      ],
+      "level": "advanced",
+      "equipment": [
+        "barbell"
+      ],
+      "muscle": "chest",
+      "instructions": [
+        "Lie on bench with feet flat on floor",
+        "Grip bar slightly wider than shoulder-width",
+        "Unrack bar and hold directly over chest",
+        "Lower bar to chest with control (2-3 seconds)",
+        "Press bar up explosively until arms are fully extended",
+        "Rack the bar safely when finished"
+      ],
+      "tips": [
+        "Keep shoulder blades retracted and pressed into bench",
+        "Maintain slight arch in lower back (not excessive)",
+        "Keep wrists straight and aligned with forearms",
+        "Use a spotter when lifting heavy weights",
+        "Control the descent - don't bounce the bar off your chest"
+      ],
+      "common_mistakes": [
+        "Flaring elbows too wide (keep at 45-60 degrees)",
+        "Lifting feet off ground (reduces stability)",
+        "Bouncing bar off chest (can cause injury)",
+        "Not using full range of motion"
+      ],
+      "video": "https://www.youtube.com/watch?v=rT7DgCr-3pg"
+    },
+    "Bodyweight Row": {
+      "prerequisites": [],
+      "level": "beginner",
+      "equipment": [],
+      "muscle": "back",
+      "instructions": [
+        "Find a sturdy horizontal bar or table at waist height",
+        "Lie underneath it and grab the bar with overhand grip",
+        "Keep your body straight from head to heels",
+        "Pull your chest up to the bar by squeezing your shoulder blades",
+        "Lower yourself with control back to starting position"
+      ],
+      "tips": [
+        "Keep your core engaged throughout the movement",
+        "Focus on pulling with your back muscles, not just arms",
+        "Keep your elbows close to your body",
+        "Go as high as you can - aim to touch your chest to the bar"
+      ],
+      "common_mistakes": [
+        "Arching your back too much (keep body straight)",
+        "Using only your arms (engage your back muscles)",
+        "Not going full range of motion",
+        "Swinging or using momentum"
+      ],
+      "video": "https://www.youtube.com/watch?v=t2b8Yaak6aA"
+    },
+    "Resistance Band Row": {
+      "prerequisites": [],
+      "level": "beginner",
+      "equipment": [
+        "resistance bands"
+      ],
+      "muscle": "back",
+      "video": "https://www.youtube.com/watch?v=t2b8Yaak6aA",
+      "instructions": [
+        "Anchor band at chest height",
+        "Hold handles, step back to create tension",
+        "Pull handles to chest, squeezing shoulder blades",
+        "Keep elbows close to body",
+        "Return with control"
+      ],
+      "tips": [
+        "Keep core engaged",
+        "Focus on back muscles, not just arms",
+        "Squeeze shoulder blades together",
+        "Control the return movement"
+      ],
+      "common_mistakes": [
+        "Using arms only (should engage back)",
+        "Leaning back too much",
+        "Not squeezing shoulder blades",
+        "Rushing the movement"
+      ]
+    },
+    "Superman": {
+      "prerequisites": [],
+      "level": "beginner",
+      "equipment": [],
+      "muscle": "back",
+      "instructions": [
+        "Lie face down on the floor with arms extended in front",
+        "Keep your legs straight and together",
+        "Lift your chest and legs off the ground simultaneously",
+        "Hold the position for 2-3 seconds",
+        "Lower back down with control",
+        "Repeat for desired reps"
+      ],
+      "tips": [
+        "Focus on lifting from your lower back, not just arching",
+        "Keep your neck in a neutral position (don't crane it up)",
+        "Breathe normally throughout the movement",
+        "Start with shorter holds and build up"
+      ],
+      "common_mistakes": [
+        "Over-arching the neck (can cause strain)",
+        "Lifting too high (moderate lift is more effective)",
+        "Holding breath (breathe normally)",
+        "Moving too quickly (control is key)"
+      ],
+      "video": "https://www.youtube.com/watch?v=z6PJMT2y8GQ"
+    },
+    "Reverse Fly": {
+      "prerequisites": [],
+      "level": "intermediate",
+      "equipment": [
+        "dumbbells"
+      ],
+      "muscle": "back",
+      "video": "https://www.youtube.com/watch?v=qT1yT_c5Qzg",
+      "instructions": [
+        "Stand with slight bend in knees, lean forward",
+        "Hold dumbbells with arms extended",
+        "Raise arms out to sides until parallel to floor",
+        "Squeeze shoulder blades together",
+        "Lower with control"
+      ],
+      "tips": [
+        "Keep slight bend in elbows",
+        "Focus on rear delts and upper back",
+        "Control the movement",
+        "Don't use momentum"
+      ],
+      "common_mistakes": [
+        "Using too much weight",
+        "Swinging the weights",
+        "Not squeezing at the top",
+        "Arching back excessively"
+      ]
+    },
+    "Pull-up": {
+      "prerequisites": [
+        "Bodyweight Row"
+      ],
+      "level": "intermediate",
+      "equipment": [
+        "pull-up bar"
+      ],
+      "muscle": "back",
+      "instructions": [
+        "Hang from bar with palms facing away (overhand grip)",
+        "Hands slightly wider than shoulder-width",
+        "Engage your lats and pull your body up",
+        "Pull until chin clears the bar",
+        "Lower yourself with control to full arm extension",
+        "Repeat for desired reps"
+      ],
+      "tips": [
+        "Start from a dead hang (full arm extension)",
+        "Focus on pulling with your back, not just arms",
+        "Keep your core engaged throughout",
+        "Avoid swinging or using momentum",
+        "Use resistance bands for assistance if needed"
+      ],
+      "common_mistakes": [
+        "Using momentum or kipping (reduces effectiveness)",
+        "Not going to full extension at bottom",
+        "Pulling with arms only (should engage lats first)",
+        "Rushing the movement (control is key)"
+      ],
+      "video": "https://www.youtube.com/watch?v=eGo4IYlbE5g"
+    },
+    "Chin-up": {
+      "prerequisites": [
+        "Bodyweight Row"
+      ],
+      "level": "intermediate",
+      "equipment": [
+        "pull-up bar"
+      ],
+      "muscle": "back",
+      "instructions": [
+        "Hang from bar with palms facing toward you (underhand grip)",
+        "Hands shoulder-width apart or slightly narrower",
+        "Engage your back and biceps to pull your body up",
+        "Pull until chin clears the bar",
+        "Lower yourself with control to full arm extension",
+        "Repeat for desired reps"
+      ],
+      "tips": [
+        "Underhand grip targets biceps more than pull-ups",
+        "Keep your core engaged throughout",
+        "Control the descent - don't drop down",
+        "Use resistance bands for assistance if needed"
+      ],
+      "common_mistakes": [
+        "Swinging or using momentum",
+        "Not going to full extension at bottom",
+        "Rushing through the movement",
+        "Gripping too wide (shoulder-width is optimal)"
+      ],
+      "video": "https://www.youtube.com/watch?v=brhRXlOhsZk"
+    },
+    "Lat Pulldown": {
+      "prerequisites": [
+        "Pull-up"
+      ],
+      "level": "advanced",
+      "equipment": [
+        "cable machine"
+      ],
+      "muscle": "back",
+      "video": "https://www.youtube.com/watch?v=CAwf7n6Luuc",
+      "instructions": [
+        "Sit at lat pulldown machine",
+        "Grip bar wider than shoulder-width",
+        "Pull bar down to upper chest",
+        "Squeeze lats at bottom",
+        "Control the return to starting position"
+      ],
+      "tips": [
+        "Lean back slightly (15-30 degrees)",
+        "Focus on pulling with back, not arms",
+        "Full range of motion",
+        "Control the negative"
+      ],
+      "common_mistakes": [
+        "Pulling behind neck (can cause injury)",
+        "Using too much momentum",
+        "Not going full range",
+        "Pulling with arms only"
+      ]
+    },
+    "Barbell Row": {
+      "prerequisites": [
+        "Pull-up"
+      ],
+      "level": "advanced",
+      "equipment": [
+        "barbell"
+      ],
+      "muscle": "back",
+      "video": "https://www.youtube.com/watch?v=kexfEyKXgvY",
+      "instructions": [
+        "Stand with feet hip-width, slight knee bend",
+        "Hinge at hips, grip bar shoulder-width",
+        "Pull bar to lower chest/upper abdomen",
+        "Squeeze shoulder blades together",
+        "Lower with control"
+      ],
+      "tips": [
+        "Keep back straight (neutral spine)",
+        "Pull with back muscles, not just arms",
+        "Keep core engaged",
+        "Control the weight on descent"
+      ],
+      "common_mistakes": [
+        "Rounding the back",
+        "Using momentum (swinging)",
+        "Pulling too high (should be to lower chest)",
+        "Not squeezing shoulder blades"
+      ]
+    },
+    "Pike Push-ups": {
+      "prerequisites": [],
+      "level": "beginner",
+      "equipment": [],
+      "muscle": "shoulders",
+      "video": "https://www.youtube.com/watch?v=M2rwvNhxr0k",
+      "instructions": [
+        "Start in downward dog position",
+        "Hands shoulder-width, feet hip-width",
+        "Bend elbows, lower head toward floor",
+        "Push back up to starting position",
+        "Keep legs as straight as possible"
+      ],
+      "tips": [
+        "Great progression toward handstand push-ups",
+        "Focus on shoulder strength",
+        "Keep core engaged",
+        "Control the movement"
+      ],
+      "common_mistakes": [
+        "Bending knees too much",
+        "Not going low enough",
+        "Flaring elbows out",
+        "Rushing the movement"
+      ]
+    },
+    "Shoulder Taps": {
+      "prerequisites": [],
+      "level": "beginner",
+      "equipment": [],
+      "muscle": "shoulders",
+      "video": "https://www.youtube.com/watch?v=r4D4dzV0gm4",
+      "instructions": [
+        "Start in plank position",
+        "Keep core tight and body stable",
+        "Lift one hand, tap opposite shoulder",
+        "Return hand to floor",
+        "Alternate sides"
+      ],
+      "tips": [
+        "Keep hips level (don't rotate)",
+        "Go slow for more challenge",
+        "Great for core stability",
+        "Focus on control"
+      ],
+      "common_mistakes": [
+        "Hips rotating or sagging",
+        "Moving too fast",
+        "Lifting hand too high",
+        "Not keeping body stable"
+      ]
+    },
+    "Dumbbell Shoulder Press": {
+      "prerequisites": [],
+      "level": "intermediate",
+      "equipment": [
+        "dumbbells"
+      ],
+      "muscle": "shoulders",
+      "instructions": [
+        "Sit or stand with dumbbells at shoulder height",
+        "Palms facing forward, elbows slightly in front",
+        "Press dumbbells straight up until arms are fully extended",
+        "Keep your core engaged and back straight",
+        "Lower dumbbells with control back to shoulders",
+        "Repeat for desired reps"
+      ],
+      "tips": [
+        "Keep your core tight to protect your lower back",
+        "Don't arch your back excessively",
+        "Press straight up, not forward",
+        "Control the weight on the way down"
+      ],
+      "common_mistakes": [
+        "Arching back too much (can cause injury)",
+        "Pressing forward instead of straight up",
+        "Using too much momentum",
+        "Not going to full extension"
+      ],
+      "video": "https://www.youtube.com/watch?v=qEwKCR5JCog"
+    },
+    "Lateral Raises": {
+      "prerequisites": [],
+      "level": "intermediate",
+      "equipment": [
+        "dumbbells"
+      ],
+      "muscle": "shoulders",
+      "video": "https://www.youtube.com/watch?v=3VcKaXpzqRo",
+      "instructions": [
+        "Stand with dumbbells at sides",
+        "Raise arms out to sides until parallel to floor",
+        "Keep slight bend in elbows",
+        "Lower with control",
+        "Repeat for desired reps"
+      ],
+      "tips": [
+        "Use lighter weight (form is key)",
+        "Slight forward lean can help",
+        "Control the negative",
+        "Focus on side delts"
+      ],
+      "common_mistakes": [
+        "Using too much weight",
+        "Swinging the weights",
+        "Raising too high",
+        "Using momentum"
+      ]
+    },
+    "Overhead Press": {
+      "prerequisites": [],
+      "level": "advanced",
+      "equipment": [
+        "barbell"
+      ],
+      "muscle": "shoulders",
+      "video": "https://www.youtube.com/watch?v=2yjwXTZQDDI",
+      "instructions": [
+        "Stand with feet shoulder-width, core engaged",
+        "Grip barbell at shoulder height",
+        "Press bar straight up overhead",
+        "Keep core tight, don't arch back excessively",
+        "Lower with control back to shoulders"
+      ],
+      "tips": [
+        "Keep core engaged throughout",
+        "Press straight up, not forward",
+        "Full range of motion",
+        "Control the descent"
+      ],
+      "common_mistakes": [
+        "Arching back too much",
+        "Pressing forward instead of up",
+        "Not using full range",
+        "Using momentum"
+      ]
+    },
+    "Cable Face Pull": {
+      "prerequisites": [],
+      "level": "advanced",
+      "equipment": [
+        "cable machine"
+      ],
+      "muscle": "shoulders",
+      "video": "https://www.youtube.com/watch?v=rep-qVOkqgk",
+      "instructions": [
+        "Set cable at face height",
+        "Grab rope attachment with both hands",
+        "Pull rope toward face, separating hands",
+        "Squeeze rear delts and upper back",
+        "Return with control"
+      ],
+      "tips": [
+        "Great for shoulder health",
+        "Focus on rear delts",
+        "Keep core engaged",
+        "Control the movement"
+      ],
+      "common_mistakes": [
+        "Pulling too low or too high",
+        "Using momentum",
+        "Not squeezing at the end",
+        "Leaning back too much"
+      ]
+    },
+    "Squats": {
+      "prerequisites": [],
+      "level": "beginner",
+      "equipment": [],
+      "muscle": "legs",
+      "instructions": [
+        "Stand with feet shoulder-width apart, toes slightly turned out",
+        "Keep chest up and core engaged",
+        "Lower down by pushing hips back and bending knees",
+        "Descend until thighs are parallel to floor (or as low as comfortable)",
+        "Drive through heels to return to standing position",
+        "Keep knees tracking over toes throughout movement"
+      ],
+      "tips": [
+        "Keep your weight on your heels, not toes",
+        "Maintain a neutral spine (don't round your back)",
+        "Go as deep as your mobility allows",
+        "Keep your knees from caving inward",
+        "Breathe in on the way down, out on the way up"
+      ],
+      "common_mistakes": [
+        "Knees caving inward (keep them aligned with toes)",
+        "Leaning too far forward (keep chest up)",
+        "Not going deep enough (aim for parallel at minimum)",
+        "Rising onto toes (keep weight on heels)"
+      ],
+      "video": "https://www.youtube.com/watch?v=YaXPRqUwItQ"
+    },
+    "Lunges": {
+      "prerequisites": [],
+      "level": "beginner",
+      "equipment": [],
+      "muscle": "legs",
+      "instructions": [
+        "Stand with feet hip-width apart",
+        "Step forward with one leg, lowering your hips",
+        "Bend both knees to 90 degrees",
+        "Keep your front knee over your ankle, not past your toes",
+        "Push through your front heel to return to starting position",
+        "Alternate legs or complete all reps on one side"
+      ],
+      "tips": [
+        "Keep your torso upright throughout",
+        "Don't let your front knee cave inward",
+        "Keep your back knee just above the ground",
+        "Step far enough forward to create a 90-degree angle"
+      ],
+      "common_mistakes": [
+        "Stepping too short (knee goes past toes)",
+        "Leaning forward too much (keep torso upright)",
+        "Back knee touching the ground (keep it slightly elevated)",
+        "Knee caving inward (keep aligned with toes)"
+      ],
+      "video": "https://www.youtube.com/watch?v=QOVaHwm-Q6U"
+    },
+    "Glute Bridge": {
+      "prerequisites": [],
+      "level": "beginner",
+      "equipment": [],
+      "muscle": "legs",
+      "video": "https://www.youtube.com/watch?v=wPM8icPu6H8",
+      "instructions": [
+        "Lie on back, knees bent, feet flat",
+        "Arms at sides, palms down",
+        "Lift hips up by squeezing glutes",
+        "Form straight line from knees to shoulders",
+        "Lower with control"
+      ],
+      "tips": [
+        "Squeeze glutes at the top",
+        "Don't over-arch lower back",
+        "Keep core engaged",
+        "Push through heels"
+      ],
+      "common_mistakes": [
+        "Over-arching lower back",
+        "Not squeezing glutes",
+        "Rushing the movement",
+        "Feet too far from glutes"
+      ]
+    },
+    "Step-ups": {
+      "prerequisites": [],
+      "level": "intermediate",
+      "equipment": [],
+      "muscle": "legs",
+      "video": "https://www.youtube.com/watch?v=c_eBp2b7HZ8",
+      "instructions": [
+        "Stand in front of bench or step",
+        "Place one foot on bench",
+        "Push through heel to step up",
+        "Bring other foot up to bench",
+        "Step down with control, alternate legs"
+      ],
+      "tips": [
+        "Keep torso upright",
+        "Push through heel of working leg",
+        "Control the descent",
+        "Focus on the working leg"
+      ],
+      "common_mistakes": [
+        "Leaning forward too much",
+        "Pushing off back leg (should be front leg)",
+        "Step too high (can cause knee issues)",
+        "Not controlling descent"
+      ]
+    },
+    "Goblet Squat": {
+      "prerequisites": [
+        "Squats"
+      ],
+      "level": "intermediate",
+      "equipment": [
+        "dumbbells"
+      ],
+      "muscle": "legs",
+      "video": "https://www.youtube.com/watch?v=MeCi2j7KGpE",
+      "instructions": [
+        "Hold dumbbell or kettlebell at chest",
+        "Feet shoulder-width, toes slightly out",
+        "Lower down by pushing hips back",
+        "Go as deep as comfortable",
+        "Drive through heels to stand"
+      ],
+      "tips": [
+        "Keep chest up",
+        "Weight helps with form",
+        "Great for learning squat pattern",
+        "Control the descent"
+      ],
+      "common_mistakes": [
+        "Leaning forward too much",
+        "Knees caving inward",
+        "Not going deep enough",
+        "Rising onto toes"
+      ]
+    },
+    "Bulgarian Split Squat": {
+      "prerequisites": [
+        "Squats"
+      ],
+      "level": "intermediate",
+      "equipment": [
+        "dumbbells"
+      ],
+      "muscle": "legs",
+      "video": "https://www.youtube.com/watch?v=2C-uNgKwz0Y",
+      "instructions": [
+        "Place back foot on bench or elevated surface",
+        "Front foot forward, knee over ankle",
+        "Lower down until front thigh parallel",
+        "Drive through front heel to stand",
+        "Complete all reps on one side, then switch"
+      ],
+      "tips": [
+        "Keep torso upright",
+        "Focus on front leg",
+        "Control the movement",
+        "Great for leg strength and balance"
+      ],
+      "common_mistakes": [
+        "Leaning too far forward",
+        "Front knee going past toes",
+        "Not going deep enough",
+        "Losing balance"
+      ]
+    },
+    "Leg Press": {
+      "prerequisites": [
+        "Goblet Squat"
+      ],
+      "level": "advanced",
+      "equipment": [
+        "cable machine"
+      ],
+      "muscle": "legs",
+      "video": "https://www.youtube.com/watch?v=IZxyjW8MPdE",
+      "instructions": [
+        "Sit in leg press machine",
+        "Place feet shoulder-width on platform",
+        "Lower weight by bending knees",
+        "Push through heels to extend legs",
+        "Don't lock knees at top"
+      ],
+      "tips": [
+        "Keep knees tracking over toes",
+        "Full range of motion",
+        "Control the negative",
+        "Focus on quads and glutes"
+      ],
+      "common_mistakes": [
+        "Knees caving inward",
+        "Going too deep (lower back lifts)",
+        "Locking knees at top",
+        "Not controlling the weight"
+      ]
+    },
+    "Barbell Squat": {
+      "prerequisites": [
+        "Goblet Squat"
+      ],
+      "level": "advanced",
+      "equipment": [
+        "barbell"
+      ],
+      "muscle": "legs",
+      "video": "https://www.youtube.com/watch?v=YaXPRqUwItQ",
+      "instructions": [
+        "Place bar on upper back (not neck)",
+        "Feet shoulder-width, toes slightly out",
+        "Lower by pushing hips back and bending knees",
+        "Go to parallel or below",
+        "Drive through heels to stand"
+      ],
+      "tips": [
+        "Keep chest up",
+        "Knees track over toes",
+        "Full range of motion",
+        "Control the descent"
+      ],
+      "common_mistakes": [
+        "Knees caving inward",
+        "Leaning too far forward",
+        "Not going deep enough",
+        "Rising onto toes"
+      ]
+    },
+    "Bench Dips": {
+      "prerequisites": [],
+      "level": "beginner",
+      "equipment": [],
+      "muscle": "triceps",
+      "video": "https://www.youtube.com/watch?v=0326dy_-CzM",
+      "instructions": [
+        "Sit on edge of bench, hands gripping edge",
+        "Slide forward, legs extended",
+        "Lower body by bending elbows",
+        "Go until elbows at 90 degrees",
+        "Push back up to starting position"
+      ],
+      "tips": [
+        "Keep shoulders down",
+        "Control the movement",
+        "Don't go too low",
+        "Focus on triceps"
+      ],
+      "common_mistakes": [
+        "Shoulders rolling forward",
+        "Going too low (can cause shoulder pain)",
+        "Not controlling the movement",
+        "Legs too close (makes it easier)"
+      ]
+    },
+    "Triceps Push-ups": {
+      "prerequisites": [],
+      "level": "beginner",
+      "equipment": [],
+      "muscle": "triceps",
+      "video": "https://www.youtube.com/watch?v=IODxDxX7oi4",
+      "instructions": [
+        "Start in plank position",
+        "Place hands close together (diamond shape)",
+        "Keep elbows close to body",
+        "Lower body, focusing on triceps",
+        "Push back up"
+      ],
+      "tips": [
+        "Hands close together targets triceps",
+        "Keep body straight",
+        "Control the movement",
+        "More challenging than regular push-ups"
+      ],
+      "common_mistakes": [
+        "Hands too wide (becomes regular push-up)",
+        "Elbows flaring out",
+        "Not going low enough",
+        "Sagging hips"
+      ]
+    },
+    "Overhead Dumbbell Extension": {
+      "prerequisites": [],
+      "level": "intermediate",
+      "equipment": [
+        "dumbbells"
+      ],
+      "muscle": "triceps",
+      "video": "https://www.youtube.com/watch?v=nRiN9L9lUEk",
+      "instructions": [
+        "Sit or stand, hold dumbbell overhead",
+        "Lower dumbbell behind head by bending elbows",
+        "Keep elbows pointing forward",
+        "Extend arms back up",
+        "Squeeze triceps at top"
+      ],
+      "tips": [
+        "Keep elbows close together",
+        "Control the movement",
+        "Focus on triceps",
+        "Don't arch back excessively"
+      ],
+      "common_mistakes": [
+        "Elbows flaring out",
+        "Using too much weight",
+        "Not controlling the negative",
+        "Arching back too much"
+      ]
+    },
+    "Triceps Pushdown": {
+      "prerequisites": [],
+      "level": "intermediate",
+      "equipment": [
+        "cable machine"
+      ],
+      "muscle": "triceps",
+      "video": "https://www.youtube.com/watch?v=vB5OHsJ3EME",
+      "instructions": [
+        "Stand at cable machine, grab bar attachment",
+        "Elbows at sides, bent at 90 degrees",
+        "Push bar down until arms extended",
+        "Squeeze triceps at bottom",
+        "Return with control"
+      ],
+      "tips": [
+        "Keep elbows at sides",
+        "Focus on triceps contraction",
+        "Control the return",
+        "Full range of motion"
+      ],
+      "common_mistakes": [
+        "Elbows moving away from body",
+        "Using momentum",
+        "Not going full range",
+        "Leaning forward"
+      ]
+    },
+    "Close Grip Bench Press": {
+      "prerequisites": [
+        "Bench Press"
+      ],
+      "level": "advanced",
+      "equipment": [
+        "barbell"
+      ],
+      "muscle": "triceps",
+      "video": "https://www.youtube.com/watch?v=nEF0bv2FW94",
+      "instructions": [
+        "Lie on bench, grip bar close (hands 6-8 inches apart)",
+        "Lower bar to lower chest",
+        "Keep elbows close to body",
+        "Press up, focusing on triceps",
+        "Full extension at top"
+      ],
+      "tips": [
+        "Hands closer than regular bench press",
+        "Targets triceps more",
+        "Control the movement",
+        "Keep elbows in"
+      ],
+      "common_mistakes": [
+        "Hands too wide (becomes regular bench)",
+        "Elbows flaring out",
+        "Not controlling the weight",
+        "Bouncing off chest"
+      ]
+    },
+    "Crunches": {
+      "prerequisites": [],
+      "level": "beginner",
+      "equipment": [],
+      "muscle": "core",
+      "instructions": [
+        "Lie on your back with knees bent, feet flat on floor",
+        "Place hands behind your head (don't pull on neck)",
+        "Engage your core and lift your shoulders off the ground",
+        "Curl your upper body toward your knees",
+        "Hold briefly at the top",
+        "Lower back down with control",
+        "Repeat for desired reps"
+      ],
+      "tips": [
+        "Don't pull on your neck with your hands",
+        "Focus on lifting with your abs, not momentum",
+        "Keep your lower back on the ground",
+        "Exhale as you crunch up, inhale as you lower"
+      ],
+      "common_mistakes": [
+        "Pulling on neck (can cause strain)",
+        "Using momentum instead of muscle",
+        "Coming up too high (small range is fine)",
+        "Lifting lower back off ground (keep it down)"
+      ],
+      "video": "https://www.youtube.com/watch?v=MKmrqcoCZ-M"
+    },
+    "Leg Raises": {
+      "prerequisites": [],
+      "level": "beginner",
+      "equipment": [],
+      "muscle": "core",
+      "instructions": [
+        "Lie flat on your back with legs straight",
+        "Place hands under your lower back for support",
+        "Keep your lower back pressed to the floor",
+        "Lift your legs straight up until perpendicular to floor",
+        "Lower your legs slowly with control",
+        "Stop before your lower back lifts off the floor",
+        "Repeat for desired reps"
+      ],
+      "tips": [
+        "Keep your core engaged throughout",
+        "Lower slowly - control is more important than speed",
+        "Don't let your lower back arch off the floor",
+        "If too difficult, bend knees slightly or raise less high"
+      ],
+      "common_mistakes": [
+        "Arching lower back (keep it pressed to floor)",
+        "Swinging legs (use controlled movement)",
+        "Going too fast (slow and controlled is better)",
+        "Not engaging core (should feel it in your abs)"
+      ],
+      "video": "https://www.youtube.com/watch?v=JB2oyawG9KI"
+    },
+    "Russian Twists": {
+      "prerequisites": [],
+      "level": "intermediate",
+      "equipment": [],
+      "muscle": "core",
+      "video": "https://www.youtube.com/watch?v=wkD8rjkodUI",
+      "instructions": [
+        "Sit on floor, knees bent, lean back slightly",
+        "Hold weight or hands together",
+        "Rotate torso side to side",
+        "Keep core engaged",
+        "Touch floor on each side"
+      ],
+      "tips": [
+        "Keep back straight",
+        "Control the rotation",
+        "Focus on core, not speed",
+        "Can lift feet for more challenge"
+      ],
+      "common_mistakes": [
+        "Rounding the back",
+        "Moving too fast",
+        "Not engaging core",
+        "Leaning back too much"
+      ]
+    },
+    "Hanging Knee Raise": {
+      "prerequisites": [],
+      "level": "intermediate",
+      "equipment": [
+        "pull-up bar"
+      ],
+      "muscle": "core",
+      "video": "https://www.youtube.com/watch?v=79B0g5n4w2I",
+      "instructions": [
+        "Hang from pull-up bar",
+        "Engage core and lift knees toward chest",
+        "Pause at top, squeeze abs",
+        "Lower with control",
+        "Repeat for desired reps"
+      ],
+      "tips": [
+        "Keep shoulders engaged (don't hang passively)",
+        "Control the movement",
+        "Focus on abs, not momentum",
+        "Can progress to straight legs"
+      ],
+      "common_mistakes": [
+        "Swinging (using momentum)",
+        "Not engaging core",
+        "Going too fast",
+        "Hanging passively from shoulders"
+      ]
+    },
+    "Cable Crunch": {
+      "prerequisites": [],
+      "level": "advanced",
+      "equipment": [
+        "cable machine"
+      ],
+      "muscle": "core",
+      "video": "https://www.youtube.com/watch?v=MKmrqcoCZ-M",
+      "instructions": [
+        "Kneel in front of cable machine",
+        "Grab rope attachment, bring to head",
+        "Curl down, bringing elbows toward knees",
+        "Squeeze abs at bottom",
+        "Return with control"
+      ],
+      "tips": [
+        "Focus on abs, not hip flexors",
+        "Keep hips stationary",
+        "Control the movement",
+        "Squeeze at the bottom"
+      ],
+      "common_mistakes": [
+        "Using hip flexors instead of abs",
+        "Pulling with arms",
+        "Moving hips forward",
+        "Not squeezing abs"
+      ]
+    },
+    "Dragon Flags": {
+      "prerequisites": [],
+      "level": "advanced",
+      "equipment": [],
+      "muscle": "core",
+      "video": "https://www.youtube.com/watch?v=4Y2ZdHCOXok",
+      "instructions": [
+        "Lie on bench, grab behind head",
+        "Lift entire body up using core",
+        "Keep body straight",
+        "Lower with control",
+        "Very advanced exercise"
+      ],
+      "tips": [
+        "Requires strong core",
+        "Start with negatives only",
+        "Keep body rigid",
+        "Control is everything"
+      ],
+      "common_mistakes": [
+        "Bending at hips",
+        "Using momentum",
+        "Not keeping body straight",
+        "Going too fast"
+      ]
+    },
+    "Plank": {
+      "prerequisites": [],
+      "level": "beginner",
+      "equipment": [],
+      "muscle": "core",
+      "instructions": [
+        "Start in push-up position on forearms",
+        "Elbows directly under shoulders",
+        "Keep your body in a straight line from head to heels",
+        "Engage your core and glutes",
+        "Hold the position for desired time",
+        "Breathe normally throughout"
+      ],
+      "tips": [
+        "Don't let your hips sag or pike up",
+        "Keep your neck in neutral position",
+        "Focus on engaging your core, not just holding position",
+        "Start with shorter holds (20-30 seconds) and build up"
+      ],
+      "common_mistakes": [
+        "Hips sagging (keep body straight)",
+        "Hips too high (piking up)",
+        "Holding breath (breathe normally)",
+        "Looking up (keep neck neutral)"
+      ],
+      "video": "https://www.youtube.com/watch?v=pSHjTRCQxIw"
+    },
+    "Side Plank": {
+      "prerequisites": [
+        "Plank"
+      ],
+      "level": "intermediate",
+      "equipment": [],
+      "muscle": "core",
+      "video": "https://www.youtube.com/watch?v=K2VljzCC16g",
+      "instructions": [
+        "Lie on side, prop up on forearm",
+        "Stack feet, lift hips",
+        "Form straight line from head to feet",
+        "Hold position",
+        "Switch sides"
+      ],
+      "tips": [
+        "Keep core engaged",
+        "Don't let hips sag",
+        "Breathe normally",
+        "Great for obliques"
+      ],
+      "common_mistakes": [
+        "Hips sagging",
+        "Not keeping body straight",
+        "Holding breath",
+        "Shoulder not aligned"
+      ]
+    },
+    "Mountain Climbers": {
+      "prerequisites": [
+        "Plank"
+      ],
+      "level": "intermediate",
+      "equipment": [],
+      "muscle": "core",
+      "video": "https://www.youtube.com/watch?v=nmwgirgXLYM",
+      "instructions": [
+        "Start in plank position",
+        "Alternate bringing knees to chest",
+        "Keep hips level",
+        "Maintain fast pace",
+        "Keep core engaged"
+      ],
+      "tips": [
+        "Great cardio and core exercise",
+        "Keep hips stable",
+        "Control the movement",
+        "Breathe rhythmically"
+      ],
+      "common_mistakes": [
+        "Hips bouncing up and down",
+        "Moving too fast (losing form)",
+        "Not engaging core",
+        "Feet landing too wide"
+      ]
+    },
+    "Bicycle Crunches": {
+      "prerequisites": [
+        "Crunches"
+      ],
+      "level": "intermediate",
+      "equipment": [],
+      "muscle": "core",
+      "video": "https://www.youtube.com/watch?v=Iwyvozckjak",
+      "instructions": [
+        "Lie on back, hands behind head",
+        "Bring knees to 90 degrees",
+        "Alternate bringing elbow to opposite knee",
+        "Extend other leg straight",
+        "Keep core engaged"
+      ],
+      "tips": [
+        "Focus on abs, not neck",
+        "Control the movement",
+        "Don't pull on neck",
+        "Great for obliques"
+      ],
+      "common_mistakes": [
+        "Pulling on neck",
+        "Moving too fast",
+        "Not engaging core",
+        "Using momentum"
+      ]
+    },
+    "Dead Bug": {
+      "prerequisites": [],
+      "level": "beginner",
+      "equipment": [],
+      "muscle": "core",
+      "video": "https://www.youtube.com/watch?v=g_BYB0R-4Ws",
+      "instructions": [
+        "Lie on back, arms extended up",
+        "Knees at 90 degrees",
+        "Lower opposite arm and leg",
+        "Return to start",
+        "Alternate sides"
+      ],
+      "tips": [
+        "Keep lower back pressed to floor",
+        "Move slowly and controlled",
+        "Great for core stability",
+        "Focus on coordination"
+      ],
+      "common_mistakes": [
+        "Lower back arching off floor",
+        "Moving too fast",
+        "Not keeping core engaged",
+        "Lifting head"
+      ]
+    },
+    "Hollow Body Hold": {
+      "prerequisites": [
+        "Plank"
+      ],
+      "level": "intermediate",
+      "equipment": [],
+      "muscle": "core",
+      "video": "https://www.youtube.com/watch?v=td7qXNd3lqU",
+      "instructions": [
+        "Lie on back, arms extended overhead",
+        "Lift shoulders and legs off ground",
+        "Keep lower back pressed to floor",
+        "Hold position",
+        "Form 'banana' shape"
+      ],
+      "tips": [
+        "Keep core engaged",
+        "Breathe normally",
+        "Start with shorter holds",
+        "Great for core strength"
+      ],
+      "common_mistakes": [
+        "Lower back arching",
+        "Holding breath",
+        "Not engaging core",
+        "Arms or legs too high"
+      ]
+    },
+    "Diamond Push-ups": {
+      "prerequisites": [
+        "Push-ups"
+      ],
+      "level": "intermediate",
+      "equipment": [],
+      "muscle": "chest",
+      "video": "https://www.youtube.com/watch?v=IODxDxX7oi4",
+      "instructions": [
+        "Start in plank position",
+        "Place hands together forming diamond shape",
+        "Keep body straight",
+        "Lower body, elbows close to body",
+        "Push back up"
+      ],
+      "tips": [
+        "Very challenging triceps exercise",
+        "Keep core engaged",
+        "Control the movement",
+        "Can do on knees to start"
+      ],
+      "common_mistakes": [
+        "Sagging hips",
+        "Elbows flaring out",
+        "Not going low enough",
+        "Moving too fast"
+      ]
+    },
+    "Archer Push-ups": {
+      "prerequisites": [
+        "Decline Push-ups"
+      ],
+      "level": "advanced",
+      "equipment": [],
+      "muscle": "chest",
+      "video": "https://www.youtube.com/watch?v=IODxDxX7oi4",
+      "instructions": [
+        "Start in wide push-up position",
+        "Shift weight to one side",
+        "Lower on that side while other arm extends",
+        "Push back up, shift to other side",
+        "Alternate sides"
+      ],
+      "tips": [
+        "Very advanced exercise",
+        "Requires significant strength",
+        "Great for unilateral strength",
+        "Control is key"
+      ],
+      "common_mistakes": [
+        "Not shifting weight enough",
+        "Losing form",
+        "Moving too fast",
+        "Not controlling the movement"
+      ]
+    },
+    "Incline Dumbbell Press": {
+      "prerequisites": [
+        "Dumbbell Press"
+      ],
+      "level": "intermediate",
+      "equipment": [
+        "dumbbells"
+      ],
+      "muscle": "chest",
+      "video": "https://www.youtube.com/watch?v=VmB1G1K7v94",
+      "instructions": [
+        "Set bench to 30-45 degree incline",
+        "Lie back, dumbbells at shoulder level",
+        "Press dumbbells up and slightly forward",
+        "Squeeze chest at top",
+        "Lower with control"
+      ],
+      "tips": [
+        "Targets upper chest",
+        "Control the weight",
+        "Full range of motion",
+        "Keep core engaged"
+      ],
+      "common_mistakes": [
+        "Bench too steep",
+        "Not controlling descent",
+        "Arching back too much",
+        "Flaring elbows"
+      ]
+    },
+    "Decline Dumbbell Press": {
+      "prerequisites": [
+        "Dumbbell Press"
+      ],
+      "level": "advanced",
+      "equipment": [
+        "dumbbells"
+      ],
+      "muscle": "chest",
+      "video": "https://www.youtube.com/watch?v=VmB1G1K7v94",
+      "instructions": [
+        "Set bench to decline position",
+        "Lie back, dumbbells at lower chest",
+        "Press dumbbells up",
+        "Squeeze chest at top",
+        "Lower with control"
+      ],
+      "tips": [
+        "Targets lower chest",
+        "Keep core engaged",
+        "Control the movement",
+        "Full range of motion"
+      ],
+      "common_mistakes": [
+        "Not controlling the weight",
+        "Arching back",
+        "Flaring elbows",
+        "Going too heavy"
+      ]
+    },
+    "Incline Bench Press": {
+      "prerequisites": [
+        "Bench Press"
+      ],
+      "level": "advanced",
+      "equipment": [
+        "barbell"
+      ],
+      "muscle": "chest",
+      "video": "https://www.youtube.com/watch?v=rT7DgCr-3pg",
+      "instructions": [
+        "Set bench to 30-45 degree incline",
+        "Lie back, unrack bar",
+        "Lower bar to upper chest",
+        "Press up explosively",
+        "Rack the bar"
+      ],
+      "tips": [
+        "Targets upper chest",
+        "Keep feet on floor",
+        "Control the descent",
+        "Use spotter if needed"
+      ],
+      "common_mistakes": [
+        "Bench too steep",
+        "Bouncing off chest",
+        "Flaring elbows",
+        "Not controlling weight"
+      ]
+    },
+    "Push-up Hold": {
+      "prerequisites": [
+        "Push-ups"
+      ],
+      "level": "intermediate",
+      "equipment": [],
+      "muscle": "chest",
+      "video": "https://www.youtube.com/watch?v=IODxDxX7oi4",
+      "instructions": [
+        "Start in plank/push-up position",
+        "Hold position with arms extended",
+        "Keep body straight from head to heels",
+        "Engage core and glutes",
+        "Hold for desired time"
+      ],
+      "tips": [
+        "Great for building strength",
+        "Focus on form, not time",
+        "Breathe normally",
+        "Start with shorter holds"
+      ],
+      "common_mistakes": [
+        "Hips sagging",
+        "Hips too high",
+        "Holding breath",
+        "Not engaging core"
+      ]
+    },
+    "Cable Crossover": {
+      "prerequisites": [
+        "Cable Chest Fly"
+      ],
+      "level": "advanced",
+      "equipment": [
+        "cable machine"
+      ],
+      "muscle": "chest",
+      "video": "https://www.youtube.com/watch?v=IodlxX8oiy4",
+      "instructions": [
+        "Set cables at high position",
+        "Stand between pulleys, grab handles",
+        "Bring handles together in front",
+        "Squeeze chest",
+        "Return with control"
+      ],
+      "tips": [
+        "Great chest finisher",
+        "Constant tension",
+        "Focus on chest squeeze",
+        "Control the return"
+      ],
+      "common_mistakes": [
+        "Using momentum",
+        "Not squeezing chest",
+        "Leaning too far forward",
+        "Arms too straight"
+      ]
+    },
+    "Wide Grip Pull-up": {
+      "prerequisites": [
+        "Pull-up"
+      ],
+      "level": "advanced",
+      "equipment": [
+        "pull-up bar"
+      ],
+      "muscle": "back",
+      "video": "https://www.youtube.com/watch?v=eGo4IYlbE5g",
+      "instructions": [
+        "Grip bar wider than shoulder-width",
+        "Hang with full arm extension",
+        "Pull up until chin clears bar",
+        "Focus on lats",
+        "Lower with control"
+      ],
+      "tips": [
+        "Wider grip targets lats more",
+        "Keep core engaged",
+        "Control the movement",
+        "Full range of motion"
+      ],
+      "common_mistakes": [
+        "Using momentum",
+        "Not going full range",
+        "Pulling with arms only",
+        "Swinging"
+      ]
+    },
+    "Close Grip Pull-up": {
+      "prerequisites": [
+        "Pull-up"
+      ],
+      "level": "advanced",
+      "equipment": [
+        "pull-up bar"
+      ],
+      "muscle": "back",
+      "video": "https://www.youtube.com/watch?v=eGo4IYlbE5g",
+      "instructions": [
+        "Grip bar close (hands together or narrow)",
+        "Hang with full extension",
+        "Pull up, focusing on biceps and back",
+        "Chin over bar",
+        "Lower with control"
+      ],
+      "tips": [
+        "Narrow grip targets biceps more",
+        "Keep core engaged",
+        "Control the movement",
+        "Full range of motion"
+      ],
+      "common_mistakes": [
+        "Using momentum",
+        "Not going full range",
+        "Swinging",
+        "Rushing the movement"
+      ]
+    },
+    "One-Arm Dumbbell Row": {
+      "prerequisites": [
+        "Pull-up"
+      ],
+      "level": "advanced",
+      "equipment": [
+        "dumbbells"
+      ],
+      "muscle": "back",
+      "video": "https://www.youtube.com/watch?v=kexfEyKXgvY",
+      "instructions": [
+        "Place one knee and hand on bench",
+        "Hold dumbbell in other hand",
+        "Pull dumbbell to hip/ribs",
+        "Squeeze back muscles",
+        "Lower with control"
+      ],
+      "tips": [
+        "Great for unilateral strength",
+        "Focus on back, not arms",
+        "Control the movement",
+        "Keep core engaged"
+      ],
+      "common_mistakes": [
+        "Rotating torso",
+        "Using momentum",
+        "Pulling with arms only",
+        "Not squeezing back"
+      ]
+    },
+    "T-Bar Row": {
+      "prerequisites": [
+        "Barbell Row"
+      ],
+      "level": "advanced",
+      "equipment": [
+        "barbell"
+      ],
+      "muscle": "back",
+      "video": "https://www.youtube.com/watch?v=kexfEyKXgvY",
+      "instructions": [
+        "Straddle T-bar row machine",
+        "Grip handles, hinge at hips",
+        "Pull weight to chest/abdomen",
+        "Squeeze shoulder blades",
+        "Lower with control"
+      ],
+      "tips": [
+        "Great for back thickness",
+        "Keep back straight",
+        "Control the movement",
+        "Focus on back muscles"
+      ],
+      "common_mistakes": [
+        "Rounding back",
+        "Using momentum",
+        "Not squeezing at top",
+        "Pulling too high"
+      ]
+    },
+    "Shrugs": {
+      "prerequisites": [],
+      "level": "intermediate",
+      "equipment": [
+        "dumbbells"
+      ],
+      "muscle": "back",
+      "video": "https://www.youtube.com/watch?v=nZ4JBXQ0TQw",
+      "instructions": [
+        "Stand with dumbbells at sides",
+        "Lift shoulders straight up",
+        "Squeeze traps at top",
+        "Hold briefly",
+        "Lower with control"
+      ],
+      "tips": [
+        "Focus on traps",
+        "Don't roll shoulders",
+        "Control the movement",
+        "Full range of motion"
+      ],
+      "common_mistakes": [
+        "Rolling shoulders (should lift straight up)",
+        "Using too much weight",
+        "Not controlling the movement",
+        "Not squeezing at top"
+      ]
+    },
+    "Barbell Shrugs": {
+      "prerequisites": [
+        "Shrugs"
+      ],
+      "level": "advanced",
+      "equipment": [
+        "barbell"
+      ],
+      "muscle": "back",
+      "video": "https://www.youtube.com/watch?v=nZ4JBXQ0TQw",
+      "instructions": [
+        "Stand with barbell at waist",
+        "Lift shoulders straight up",
+        "Squeeze traps at top",
+        "Hold briefly",
+        "Lower with control"
+      ],
+      "tips": [
+        "Can use more weight than dumbbells",
+        "Lift straight up, don't roll",
+        "Control the movement",
+        "Focus on traps"
+      ],
+      "common_mistakes": [
+        "Rolling shoulders",
+        "Using momentum",
+        "Not controlling weight",
+        "Not squeezing traps"
+      ]
+    },
+    "Cable Row": {
+      "prerequisites": [
+        "Pull-up"
+      ],
+      "level": "advanced",
+      "equipment": [
+        "cable machine"
+      ],
+      "muscle": "back",
+      "video": "https://www.youtube.com/watch?v=t2b8Yaak6aA",
+      "instructions": [
+        "Sit at cable row machine",
+        "Grab handle, feet on platform",
+        "Pull handle to lower chest/upper abdomen",
+        "Squeeze shoulder blades",
+        "Return with control"
+      ],
+      "tips": [
+        "Keep back straight",
+        "Focus on back muscles",
+        "Control the return",
+        "Full range of motion"
+      ],
+      "common_mistakes": [
+        "Leaning back too much",
+        "Using momentum",
+        "Pulling with arms only",
+        "Not squeezing shoulder blades"
+      ]
+    },
+    "Prone Y-T-W": {
+      "prerequisites": [
+        "Superman"
+      ],
+      "level": "intermediate",
+      "equipment": [],
+      "muscle": "back",
+      "video": "https://www.youtube.com/watch?v=z6PJMT2y8GQ",
+      "instructions": [
+        "Lie face down on floor or bench",
+        "Arms extended, form Y shape",
+        "Lift arms up, hold briefly",
+        "Move to T shape, lift",
+        "Move to W shape, lift"
+      ],
+      "tips": [
+        "Great for shoulder health",
+        "Control each position",
+        "Focus on rear delts",
+        "Keep core engaged"
+      ],
+      "common_mistakes": [
+        "Moving too fast",
+        "Not holding positions",
+        "Using momentum",
+        "Not engaging muscles"
+      ]
+    },
+    "Biceps Curl": {
+      "prerequisites": [],
+      "level": "beginner",
+      "equipment": [
+        "dumbbells"
+      ],
+      "muscle": "biceps",
+      "video": "https://www.youtube.com/watch?v=ykJmrZ5v0Oo",
+      "instructions": [
+        "Stand with dumbbells at sides",
+        "Curl weights up by bending elbows",
+        "Squeeze biceps at top",
+        "Lower with control",
+        "Keep elbows at sides"
+      ],
+      "tips": [
+        "Control the movement",
+        "Focus on biceps",
+        "Don't swing",
+        "Full range of motion"
+      ],
+      "common_mistakes": [
+        "Swinging the weights",
+        "Moving elbows",
+        "Not controlling the negative",
+        "Using too much weight"
+      ]
+    },
+    "Hammer Curl": {
+      "prerequisites": [
+        "Biceps Curl"
+      ],
+      "level": "intermediate",
+      "equipment": [
+        "dumbbells"
+      ],
+      "muscle": "biceps",
+      "video": "https://www.youtube.com/watch?v=TwD-YGVP4Bk",
+      "instructions": [
+        "Stand with dumbbells, palms facing in",
+        "Curl weights up",
+        "Keep palms facing each other",
+        "Squeeze at top",
+        "Lower with control"
+      ],
+      "tips": [
+        "Targets brachialis and biceps",
+        "Different grip than regular curl",
+        "Control the movement",
+        "Keep elbows at sides"
+      ],
+      "common_mistakes": [
+        "Swinging weights",
+        "Rotating wrists",
+        "Moving elbows",
+        "Not controlling negative"
+      ]
+    },
+    "Concentration Curl": {
+      "prerequisites": [
+        "Biceps Curl"
+      ],
+      "level": "intermediate",
+      "equipment": [
+        "dumbbells"
+      ],
+      "muscle": "biceps",
+      "video": "https://www.youtube.com/watch?v=ykJmrZ5v0Oo",
+      "instructions": [
+        "Sit on bench, lean forward",
+        "Rest elbow on inner thigh",
+        "Curl weight up",
+        "Squeeze biceps at top",
+        "Lower with control"
+      ],
+      "tips": [
+        "Great isolation exercise",
+        "Focus on one arm at a time",
+        "Control the movement",
+        "Full range of motion"
+      ],
+      "common_mistakes": [
+        "Swinging the weight",
+        "Not controlling negative",
+        "Moving elbow off thigh",
+        "Using too much weight"
+      ]
+    },
+    "Barbell Curl": {
+      "prerequisites": [
+        "Biceps Curl"
+      ],
+      "level": "advanced",
+      "equipment": [
+        "barbell"
+      ],
+      "muscle": "biceps",
+      "video": "https://www.youtube.com/watch?v=ykJmrZ5v0Oo",
+      "instructions": [
+        "Stand with barbell at waist",
+        "Curl bar up by bending elbows",
+        "Squeeze biceps at top",
+        "Lower with control",
+        "Keep elbows at sides"
+      ],
+      "tips": [
+        "Can use more weight than dumbbells",
+        "Control the movement",
+        "Focus on biceps",
+        "Full range of motion"
+      ],
+      "common_mistakes": [
+        "Swinging the bar",
+        "Moving elbows forward",
+        "Not controlling negative",
+        "Using momentum"
+      ]
+    },
+    "Cable Biceps Curl": {
+      "prerequisites": [
+        "Biceps Curl"
+      ],
+      "level": "intermediate",
+      "equipment": [
+        "cable machine"
+      ],
+      "muscle": "biceps",
+      "video": "https://www.youtube.com/watch?v=ykJmrZ5v0Oo",
+      "instructions": [
+        "Stand at cable machine",
+        "Grab cable attachment",
+        "Curl up by bending elbows",
+        "Squeeze biceps at top",
+        "Return with control"
+      ],
+      "tips": [
+        "Constant tension from cable",
+        "Control the movement",
+        "Focus on biceps",
+        "Keep elbows at sides"
+      ],
+      "common_mistakes": [
+        "Moving elbows",
+        "Using momentum",
+        "Not controlling return",
+        "Swinging"
+      ]
+    },
+    "Resistance Band Biceps Curl": {
+      "prerequisites": [],
+      "level": "beginner",
+      "equipment": [
+        "resistance bands"
+      ],
+      "muscle": "biceps",
+      "video": "https://www.youtube.com/watch?v=ykJmrZ5v0Oo",
+      "instructions": [
+        "Stand on resistance band",
+        "Hold handles, palms facing up",
+        "Curl up by bending elbows",
+        "Squeeze biceps at top",
+        "Lower with control"
+      ],
+      "tips": [
+        "Great for home workouts",
+        "Control the movement",
+        "Focus on biceps",
+        "Adjust band tension as needed"
+      ],
+      "common_mistakes": [
+        "Swinging",
+        "Moving elbows",
+        "Not controlling negative",
+        "Using too much tension"
+      ]
+    },
+    "Chin-up Hold": {
+      "prerequisites": [
+        "Chin-up"
+      ],
+      "level": "advanced",
+      "equipment": [
+        "pull-up bar"
+      ],
+      "muscle": "biceps",
+      "video": "https://www.youtube.com/watch?v=brhRXlOhsZk",
+      "instructions": [
+        "Hang from bar with underhand grip",
+        "Pull up until chin over bar",
+        "Hold position",
+        "Keep core engaged",
+        "Hold for desired time"
+      ],
+      "tips": [
+        "Very challenging",
+        "Focus on form",
+        "Breathe normally",
+        "Start with shorter holds"
+      ],
+      "common_mistakes": [
+        "Not holding position",
+        "Swinging",
+        "Holding breath",
+        "Not engaging core"
+      ]
+    },
+    "Front Raise": {
+      "prerequisites": [],
+      "level": "intermediate",
+      "equipment": [
+        "dumbbells"
+      ],
+      "muscle": "shoulders",
+      "video": "https://www.youtube.com/watch?v=3VcKaXpzqRo",
+      "instructions": [
+        "Stand with dumbbells at sides",
+        "Raise arms straight in front",
+        "Lift until parallel to floor",
+        "Lower with control",
+        "Keep slight bend in elbows"
+      ],
+      "tips": [
+        "Targets front delts",
+        "Control the movement",
+        "Don't swing",
+        "Focus on shoulders"
+      ],
+      "common_mistakes": [
+        "Swinging weights",
+        "Using too much weight",
+        "Not controlling negative",
+        "Raising too high"
+      ]
+    },
+    "Rear Delt Fly": {
+      "prerequisites": [
+        "Reverse Fly"
+      ],
+      "level": "intermediate",
+      "equipment": [
+        "dumbbells"
+      ],
+      "muscle": "shoulders",
+      "video": "https://www.youtube.com/watch?v=qT1yT_c5Qzg",
+      "instructions": [
+        "Stand with slight bend, lean forward",
+        "Hold dumbbells, arms extended",
+        "Raise arms out to sides",
+        "Squeeze rear delts",
+        "Lower with control"
+      ],
+      "tips": [
+        "Great for shoulder health",
+        "Control the movement",
+        "Focus on rear delts",
+        "Keep slight bend in elbows"
+      ],
+      "common_mistakes": [
+        "Using too much weight",
+        "Swinging",
+        "Not squeezing at top",
+        "Moving too fast"
+      ]
+    },
+    "Arnold Press": {
+      "prerequisites": [
+        "Dumbbell Shoulder Press"
+      ],
+      "level": "advanced",
+      "equipment": [
+        "dumbbells"
+      ],
+      "muscle": "shoulders",
+      "video": "https://www.youtube.com/watch?v=qEwKCR5JCog",
+      "instructions": [
+        "Start with dumbbells at shoulders, palms facing you",
+        "Press up while rotating palms",
+        "End with palms facing forward",
+        "Reverse on way down",
+        "Full rotation"
+      ],
+      "tips": [
+        "Targets all delt heads",
+        "Control the rotation",
+        "Focus on shoulders",
+        "Full range of motion"
+      ],
+      "common_mistakes": [
+        "Not completing rotation",
+        "Using momentum",
+        "Not controlling movement",
+        "Arching back"
+      ]
+    },
+    "Handstand Push-up": {
+      "prerequisites": [
+        "Pike Push-ups"
+      ],
+      "level": "advanced",
+      "equipment": [],
+      "muscle": "shoulders",
+      "video": "https://www.youtube.com/watch?v=M2rwvNhxr0k",
+      "instructions": [
+        "Kick up to handstand against wall",
+        "Hands shoulder-width",
+        "Lower head toward floor",
+        "Push back up",
+        "Very advanced exercise"
+      ],
+      "tips": [
+        "Requires significant strength",
+        "Start with pike push-ups",
+        "Use wall for support",
+        "Control is everything"
+      ],
+      "common_mistakes": [
+        "Not ready for this exercise",
+        "Losing balance",
+        "Not controlling movement",
+        "Going too fast"
+      ]
+    },
+    "Wall Handstand Hold": {
+      "prerequisites": [
+        "Pike Push-ups"
+      ],
+      "level": "intermediate",
+      "equipment": [],
+      "muscle": "shoulders",
+      "video": "https://www.youtube.com/watch?v=M2rwvNhxr0k",
+      "instructions": [
+        "Kick up to handstand against wall",
+        "Hands shoulder-width",
+        "Hold position",
+        "Keep core engaged",
+        "Breathe normally"
+      ],
+      "tips": [
+        "Great for building strength",
+        "Start with shorter holds",
+        "Focus on form",
+        "Progress gradually"
+      ],
+      "common_mistakes": [
+        "Arching back",
+        "Not engaging core",
+        "Holding breath",
+        "Hands too wide or narrow"
+      ]
+    },
+    "Calf Raises": {
+      "prerequisites": [],
+      "level": "beginner",
+      "equipment": [],
+      "muscle": "legs",
+      "video": "https://www.youtube.com/watch?v=yM4t7KqHq8Y",
+      "instructions": [
+        "Stand with feet hip-width",
+        "Rise up onto toes",
+        "Squeeze calves at top",
+        "Lower with control",
+        "Full range of motion"
+      ],
+      "tips": [
+        "Can do bodyweight or weighted",
+        "Control the movement",
+        "Focus on calves",
+        "Full extension and contraction"
+      ],
+      "common_mistakes": [
+        "Not going full range",
+        "Moving too fast",
+        "Not squeezing at top",
+        "Bouncing"
+      ]
+    },
+    "Single Leg Calf Raise": {
+      "prerequisites": [
+        "Calf Raises"
+      ],
+      "level": "intermediate",
+      "equipment": [],
+      "muscle": "legs",
+      "video": "https://www.youtube.com/watch?v=yM4t7KqHq8Y",
+      "instructions": [
+        "Stand on one leg",
+        "Rise up onto toe",
+        "Squeeze calf at top",
+        "Lower with control",
+        "Complete all reps, then switch"
+      ],
+      "tips": [
+        "More challenging than both legs",
+        "Great for balance",
+        "Control the movement",
+        "Focus on one leg at a time"
+      ],
+      "common_mistakes": [
+        "Losing balance",
+        "Not going full range",
+        "Moving too fast",
+        "Not controlling negative"
+      ]
+    },
+    "Wall Sit": {
+      "prerequisites": [],
+      "level": "beginner",
+      "equipment": [],
+      "muscle": "legs",
+      "video": "https://www.youtube.com/watch?v=yM4t7KqHq8Y",
+      "instructions": [
+        "Stand with back against wall",
+        "Slide down until thighs parallel to floor",
+        "Hold position",
+        "Keep core engaged",
+        "Hold for desired time"
+      ],
+      "tips": [
+        "Great for leg endurance",
+        "Start with shorter holds",
+        "Breathe normally",
+        "Focus on quads"
+      ],
+      "common_mistakes": [
+        "Not going low enough",
+        "Holding breath",
+        "Not engaging core",
+        "Knees going past toes"
+      ]
+    },
+    "Romanian Deadlift": {
+      "prerequisites": [
+        "Squats"
+      ],
+      "level": "intermediate",
+      "equipment": [
+        "dumbbells"
+      ],
+      "muscle": "legs",
+      "video": "https://www.youtube.com/watch?v=op9S9L3C36s",
+      "instructions": [
+        "Stand with dumbbells/kettlebell",
+        "Hinge at hips, slight knee bend",
+        "Lower weight down legs",
+        "Feel stretch in hamstrings",
+        "Return to standing by squeezing glutes"
+      ],
+      "tips": [
+        "Great for hamstrings and glutes",
+        "Keep back straight",
+        "Control the movement",
+        "Focus on hip hinge"
+      ],
+      "common_mistakes": [
+        "Rounding back",
+        "Bending knees too much",
+        "Not feeling hamstring stretch",
+        "Using too much weight"
+      ]
+    },
+    "Barbell Romanian Deadlift": {
+      "prerequisites": [
+        "Romanian Deadlift"
+      ],
+      "level": "advanced",
+      "equipment": [
+        "barbell"
+      ],
+      "muscle": "legs",
+      "video": "https://www.youtube.com/watch?v=op9S9L3C36s",
+      "instructions": [
+        "Stand with barbell at waist",
+        "Hinge at hips, slight knee bend",
+        "Lower bar down legs",
+        "Feel hamstring stretch",
+        "Return by squeezing glutes"
+      ],
+      "tips": [
+        "Can use more weight than dumbbells",
+        "Keep back straight",
+        "Control the movement",
+        "Focus on hamstrings and glutes"
+      ],
+      "common_mistakes": [
+        "Rounding back",
+        "Bending knees too much",
+        "Not controlling weight",
+        "Going too heavy"
+      ]
+    },
+    "Leg Curl": {
+      "prerequisites": [
+        "Romanian Deadlift"
+      ],
+      "level": "advanced",
+      "equipment": [
+        "cable machine"
+      ],
+      "muscle": "legs",
+      "video": "https://www.youtube.com/watch?v=IZxyjW8MPdE",
+      "instructions": [
+        "Lie on leg curl machine",
+        "Place ankles under pad",
+        "Curl heels toward glutes",
+        "Squeeze hamstrings",
+        "Lower with control"
+      ],
+      "tips": [
+        "Isolates hamstrings",
+        "Control the movement",
+        "Full range of motion",
+        "Focus on hamstrings"
+      ],
+      "common_mistakes": [
+        "Using momentum",
+        "Not going full range",
+        "Lifting hips",
+        "Not controlling negative"
+      ]
+    },
+    "Walking Lunges": {
+      "prerequisites": [
+        "Lunges"
+      ],
+      "level": "intermediate",
+      "equipment": [],
+      "muscle": "legs",
+      "video": "https://www.youtube.com/watch?v=QOVaHwm-Q6U",
+      "instructions": [
+        "Stand with feet together",
+        "Step forward into lunge",
+        "Push through front heel to step forward",
+        "Alternate legs as you walk",
+        "Keep torso upright"
+      ],
+      "tips": [
+        "Great for leg endurance",
+        "Keep core engaged",
+        "Control each step",
+        "Focus on form"
+      ],
+      "common_mistakes": [
+        "Leaning forward",
+        "Not going deep enough",
+        "Moving too fast",
+        "Knee going past toes"
+      ]
+    },
+    "Reverse Lunges": {
+      "prerequisites": [
+        "Lunges"
+      ],
+      "level": "intermediate",
+      "equipment": [],
+      "muscle": "legs",
+      "video": "https://www.youtube.com/watch?v=QOVaHwm-Q6U",
+      "instructions": [
+        "Stand with feet together",
+        "Step backward into lunge",
+        "Front knee at 90 degrees",
+        "Push through front heel to return",
+        "Alternate legs"
+      ],
+      "tips": [
+        "Easier on knees than forward lunges",
+        "Keep torso upright",
+        "Control the movement",
+        "Focus on front leg"
+      ],
+      "common_mistakes": [
+        "Leaning forward",
+        "Not going deep enough",
+        "Back knee touching ground",
+        "Knee going past toes"
+      ]
+    },
+    "Side Lunges": {
+      "prerequisites": [
+        "Lunges"
+      ],
+      "level": "intermediate",
+      "equipment": [],
+      "muscle": "legs",
+      "video": "https://www.youtube.com/watch?v=QOVaHwm-Q6U",
+      "instructions": [
+        "Stand with feet together",
+        "Step to side, lower into lunge",
+        "Keep other leg straight",
+        "Push through heel to return",
+        "Alternate sides"
+      ],
+      "tips": [
+        "Targets inner and outer thighs",
+        "Keep torso upright",
+        "Control the movement",
+        "Focus on working leg"
+      ],
+      "common_mistakes": [
+        "Leaning forward",
+        "Not going deep enough",
+        "Knee caving inward",
+        "Moving too fast"
+      ]
+    },
+    "Pistol Squat": {
+      "prerequisites": [
+        "Bulgarian Split Squat"
+      ],
+      "level": "advanced",
+      "equipment": [],
+      "muscle": "legs",
+      "video": "https://www.youtube.com/watch?v=YaXPRqUwItQ",
+      "instructions": [
+        "Stand on one leg",
+        "Extend other leg forward",
+        "Lower down on one leg",
+        "Go as deep as possible",
+        "Push through heel to stand"
+      ],
+      "tips": [
+        "Very advanced exercise",
+        "Requires significant strength and balance",
+        "Start with assisted version",
+        "Control is key"
+      ],
+      "common_mistakes": [
+        "Not ready for this exercise",
+        "Losing balance",
+        "Not going deep enough",
+        "Knee caving inward"
+      ]
+    },
+    "Jump Squats": {
+      "prerequisites": [
+        "Squats"
+      ],
+      "level": "intermediate",
+      "equipment": [],
+      "muscle": "legs",
+      "video": "https://www.youtube.com/watch?v=YaXPRqUwItQ",
+      "instructions": [
+        "Start in squat position",
+        "Explosively jump up",
+        "Land softly in squat position",
+        "Immediately jump again",
+        "Keep core engaged"
+      ],
+      "tips": [
+        "Great for power and cardio",
+        "Land softly to protect joints",
+        "Control the landing",
+        "Focus on explosive power"
+      ],
+      "common_mistakes": [
+        "Landing too hard",
+        "Not controlling landing",
+        "Knees caving on landing",
+        "Moving too fast"
+      ]
+    },
+    "Sumo Squat": {
+      "prerequisites": [
+        "Squats"
+      ],
+      "level": "intermediate",
+      "equipment": [],
+      "muscle": "legs",
+      "video": "https://www.youtube.com/watch?v=YaXPRqUwItQ",
+      "instructions": [
+        "Stand with feet wide, toes turned out",
+        "Lower down by pushing hips back",
+        "Go as deep as comfortable",
+        "Keep knees tracking over toes",
+        "Drive through heels to stand"
+      ],
+      "tips": [
+        "Targets inner thighs more",
+        "Keep chest up",
+        "Control the movement",
+        "Full range of motion"
+      ],
+      "common_mistakes": [
+        "Knees caving inward",
+        "Not going deep enough",
+        "Leaning too far forward",
+        "Rising onto toes"
+      ]
+    },
+    "Deadlift": {
+      "prerequisites": [
+        "Barbell Squat"
+      ],
+      "level": "advanced",
+      "equipment": [
+        "barbell"
+      ],
+      "muscle": "legs",
+      "video": "https://www.youtube.com/watch?v=op9S9L3C36s",
+      "instructions": [
+        "Stand with feet hip-width, bar over mid-foot",
+        "Hinge at hips, grip bar",
+        "Keep back straight, chest up",
+        "Drive through heels, stand up",
+        "Lower with control"
+      ],
+      "tips": [
+        "Full body exercise",
+        "Keep back straight",
+        "Control the movement",
+        "Use proper form"
+      ],
+      "common_mistakes": [
+        "Rounding back",
+        "Not controlling weight",
+        "Bar too far from body",
+        "Using too much weight"
+      ]
+    },
+    "Cable Leg Extension": {
+      "prerequisites": [
+        "Squats"
+      ],
+      "level": "intermediate",
+      "equipment": [
+        "cable machine"
+      ],
+      "muscle": "legs",
+      "video": "https://www.youtube.com/watch?v=IZxyjW8MPdE",
+      "instructions": [
+        "Attach cable to ankle",
+        "Hold onto support",
+        "Extend leg forward",
+        "Squeeze quad at top",
+        "Return with control"
+      ],
+      "tips": [
+        "Isolates quads",
+        "Control the movement",
+        "Full range of motion",
+        "Focus on quads"
+      ],
+      "common_mistakes": [
+        "Using momentum",
+        "Not going full range",
+        "Not controlling negative",
+        "Swinging leg"
+      ]
+    },
+    "Dips": {
+      "prerequisites": [
+        "Bench Dips"
+      ],
+      "level": "intermediate",
+      "equipment": [],
+      "muscle": "triceps",
+      "instructions": [
+        "Grab parallel bars or dip bars",
+        "Support body weight on bars",
+        "Lower body by bending elbows",
+        "Go until shoulders below elbows",
+        "Push back up to starting position"
+      ],
+      "tips": [
+        "Keep core engaged",
+        "Control the movement",
+        "Full range of motion",
+        "Focus on triceps and chest"
+      ],
+      "common_mistakes": [
+        "Going too low (can cause shoulder pain)",
+        "Not controlling the movement",
+        "Flaring elbows out",
+        "Swinging or using momentum"
+      ],
+      "video": "https://www.youtube.com/watch?v=0326dy_-CzM"
+    },
+    "Chair Dips": {
+      "prerequisites": [
+        "Bench Dips"
+      ],
+      "level": "intermediate",
+      "equipment": [],
+      "muscle": "triceps",
+      "video": "https://www.youtube.com/watch?v=0326dy_-CzM",
+      "instructions": [
+        "Sit on edge of chair, hands gripping edge",
+        "Slide forward, legs extended",
+        "Lower body by bending elbows",
+        "Go until elbows at 90 degrees",
+        "Push back up"
+      ],
+      "tips": [
+        "Similar to bench dips",
+        "Keep shoulders down",
+        "Control the movement",
+        "Focus on triceps"
+      ],
+      "common_mistakes": [
+        "Shoulders rolling forward",
+        "Going too low",
+        "Not controlling movement",
+        "Legs too close"
+      ]
+    },
+    "Diamond Push-up Triceps": {
+      "prerequisites": [
+        "Triceps Push-ups"
+      ],
+      "level": "intermediate",
+      "equipment": [],
+      "muscle": "triceps",
+      "video": "https://www.youtube.com/watch?v=IODxDxX7oi4",
+      "instructions": [
+        "Start in plank, hands in diamond shape",
+        "Lower body, elbows close to body",
+        "Focus on triceps",
+        "Push back up",
+        "Keep body straight"
+      ],
+      "tips": [
+        "Very challenging triceps exercise",
+        "Keep core engaged",
+        "Control the movement",
+        "Focus on triceps"
+      ],
+      "common_mistakes": [
+        "Elbows flaring out",
+        "Sagging hips",
+        "Not going low enough",
+        "Moving too fast"
+      ]
+    },
+    "Triceps Kickback": {
+      "prerequisites": [],
+      "level": "intermediate",
+      "equipment": [
+        "dumbbells"
+      ],
+      "muscle": "triceps",
+      "video": "https://www.youtube.com/watch?v=nRiN9L9lUEk",
+      "instructions": [
+        "Hinge at hips, hold dumbbell",
+        "Bend elbow to 90 degrees",
+        "Extend arm back, squeeze triceps",
+        "Return to 90 degrees",
+        "Keep elbow at side"
+      ],
+      "tips": [
+        "Isolates triceps",
+        "Control the movement",
+        "Focus on triceps",
+        "Keep elbow stationary"
+      ],
+      "common_mistakes": [
+        "Moving elbow",
+        "Swinging weight",
+        "Not controlling negative",
+        "Using too much weight"
+      ]
+    },
+    "Overhead Triceps Extension": {
+      "prerequisites": [
+        "Overhead Dumbbell Extension"
+      ],
+      "level": "advanced",
+      "equipment": [
+        "cable machine"
+      ],
+      "muscle": "triceps",
+      "video": "https://www.youtube.com/watch?v=nRiN9L9lUEk",
+      "instructions": [
+        "Stand at cable machine",
+        "Grab rope attachment overhead",
+        "Extend arms down",
+        "Squeeze triceps at bottom",
+        "Return with control"
+      ],
+      "tips": [
+        "Targets triceps",
+        "Keep elbows close",
+        "Control the movement",
+        "Full range of motion"
+      ],
+      "common_mistakes": [
+        "Elbows flaring out",
+        "Using momentum",
+        "Not going full range",
+        "Leaning forward"
+      ]
+    },
+    "Skull Crushers": {
+      "prerequisites": [
+        "Overhead Dumbbell Extension"
+      ],
+      "level": "advanced",
+      "equipment": [
+        "barbell"
+      ],
+      "muscle": "triceps",
+      "video": "https://www.youtube.com/watch?v=nRiN9L9lUEk",
+      "instructions": [
+        "Lie on bench, hold barbell/EZ bar",
+        "Lower bar toward forehead",
+        "Keep elbows pointing up",
+        "Extend arms back up",
+        "Squeeze triceps"
+      ],
+      "tips": [
+        "Keep elbows stationary",
+        "Control the movement",
+        "Focus on triceps",
+        "Don't go too low"
+      ],
+      "common_mistakes": [
+        "Elbows flaring out",
+        "Going too low (can cause injury)",
+        "Not controlling weight",
+        "Moving elbows"
+      ]
+    },
+    "Rope Triceps Pushdown": {
+      "prerequisites": [
+        "Triceps Pushdown"
+      ],
+      "level": "advanced",
+      "equipment": [
+        "cable machine"
+      ],
+      "muscle": "triceps",
+      "video": "https://www.youtube.com/watch?v=vB5OHsJ3EME",
+      "instructions": [
+        "Stand at cable machine",
+        "Grab rope attachment",
+        "Push down, separating hands at bottom",
+        "Squeeze triceps",
+        "Return with control"
+      ],
+      "tips": [
+        "Rope allows better contraction",
+        "Separate hands at bottom",
+        "Control the movement",
+        "Focus on triceps"
+      ],
+      "common_mistakes": [
+        "Not separating hands",
+        "Using momentum",
+        "Elbows moving",
+        "Not controlling return"
+      ]
+    }
+  },
+  "goal_set_rep": {
+    "strength": {
+      "beginner": "4x6-8",
+      "intermediate": "5x4-6",
+      "advanced": "6x3-5"
+    },
+    "hypertrophy": {
+      "beginner": "3x12-15",
+      "intermediate": "4x10-12",
+      "advanced": "5x8-10"
+    },
+    "endurance": {
+      "beginner": "3x18-25",
+      "intermediate": "4x15-20",
+      "advanced": "5x12-18"
+    },
+    "weight_loss": {
+      "beginner": "3x15-20",
+      "intermediate": "4x12-18",
+      "advanced": "5x10-15"
+    },
+    "power": {
+      "beginner": "4x3-5",
+      "intermediate": "5x2-4",
+      "advanced": "6x1-3"
+    },
+    "flexibility": {
+      "beginner": "2x30-60s",
+      "intermediate": "3x45-90s",
+      "advanced": "3x60-120s"
+    },
+    "general_fitness": {
+      "beginner": "3x10-15",
+      "intermediate": "4x8-12",
+      "advanced": "4x6-10"
+    }
+  },
+  "equipment_options": [
+    {
+      "id": "none",
+      "name": "None"
+    },
+    {
+      "id": "yoga mat",
+      "name": "Yoga Mat"
+    },
+    {
+      "id": "dumbbells",
+      "name": "Dumbbells"
+    },
+    {
+      "id": "resistance bands",
+      "name": "Resistance Bands"
+    },
+    {
+      "id": "pull-up bar",
+      "name": "Pull-up Bar"
+    },
+    {
+      "id": "kettlebells",
+      "name": "Kettlebells"
+    },
+    {
+      "id": "barbell",
+      "name": "Barbell"
+    },
+    {
+      "id": "cable machine",
+      "name": "Cable Machine"
+    },
+    {
+      "id": "foam roller",
+      "name": "Foam Roller"
+    },
+    {
+      "id": "medicine ball",
+      "name": "Medicine Ball"
+    },
+    {
+      "id": "suspension trainer",
+      "name": "Suspension Trainer (TRX)"
+    },
+    {
+      "id": "exercise ball",
+      "name": "Exercise Ball"
+    },
+    {
+      "id": "bench",
+      "name": "Workout Bench"
+    },
+    {
+      "id": "power rack",
+      "name": "Power Rack"
+    },
+    {
+      "id": "smith machine",
+      "name": "Smith Machine"
+    }
+  ]
+}
