@@ -29,6 +29,11 @@ sys.path.insert(0, str(Path(__file__).parent))
 
 from data_handler import load_exercises_data, get_exercises_dict, get_goal_set_rep, get_equipment_options
 from bfs_algorithm import bfs_reserve_workout_plan
+from auth import (
+    create_user, login_user, verify_email_token, 
+    get_current_user, logout_user, is_authenticated
+)
+from user_data import save_user_workout_preferences
 
 
 # Page configuration
@@ -851,8 +856,121 @@ def plot_exercise_graph(exercises):
     plt.close(fig)
 
 
+def render_signup_page():
+    """Render the sign up page."""
+    st.markdown('<div class="main-header">📝 Create Account</div>', unsafe_allow_html=True)
+    st.markdown('<div class="sub-header">Sign up to get started</div>', unsafe_allow_html=True)
+    
+    st.markdown("<br>", unsafe_allow_html=True)
+    
+    with st.form("signup_form"):
+        name = st.text_input("Full Name (Optional)")
+        email = st.text_input("Email Address *", placeholder="your.email@example.com")
+        password = st.text_input("Password *", type="password", help="At least 6 characters")
+        password_confirm = st.text_input("Confirm Password *", type="password")
+        
+        col1, col2, col3 = st.columns([1, 2, 1])
+        with col2:
+            submitted = st.form_submit_button("📝 Sign Up", type="primary", use_container_width=True)
+        
+        if submitted:
+            # Validation
+            if not email or not password:
+                st.error("Please fill in all required fields")
+            elif password != password_confirm:
+                st.error("Passwords do not match")
+            elif len(password) < 6:
+                st.error("Password must be at least 6 characters")
+            else:
+                # Create user account
+                with st.spinner("Creating your account..."):
+                    result = create_user(email, password, name)
+                    
+                    if result["success"]:
+                        st.success(result["message"])
+                        if result.get("email_sent"):
+                            st.info("📧 Check your email for verification link. You can sign up again after verifying.")
+                        else:
+                            st.warning("⚠️ Email service not configured. Account created but email not sent.")
+                        # Go back to login after a delay
+                        st.markdown("<br>", unsafe_allow_html=True)
+                        if st.button("Go to Login"):
+                            st.session_state.current_page = "login"
+                            st.rerun()
+                    else:
+                        st.error(result["message"])
+    
+    st.markdown("---")
+    col1, col2, col3 = st.columns([1, 2, 1])
+    with col2:
+        st.markdown("<p style='text-align: center;'>Already have an account?</p>", unsafe_allow_html=True)
+        if st.button("🔐 Login Instead", use_container_width=True):
+            st.session_state.current_page = "login"
+            st.rerun()
+        if st.button("← Back to Home", use_container_width=True):
+            st.session_state.current_page = "welcome"
+            st.rerun()
+
+
+def render_login_page():
+    """Render the login page."""
+    st.markdown('<div class="main-header">🔐 Login</div>', unsafe_allow_html=True)
+    st.markdown('<div class="sub-header">Sign in to your account</div>', unsafe_allow_html=True)
+    
+    st.markdown("<br>", unsafe_allow_html=True)
+    
+    with st.form("login_form"):
+        email = st.text_input("Email Address", placeholder="your.email@example.com")
+        password = st.text_input("Password", type="password")
+        
+        col1, col2, col3 = st.columns([1, 2, 1])
+        with col2:
+            submitted = st.form_submit_button("🔐 Login", type="primary", use_container_width=True)
+        
+        if submitted:
+            if not email or not password:
+                st.error("Please enter both email and password")
+            else:
+                with st.spinner("Logging in..."):
+                    result = login_user(email, password)
+                    
+                    if result["success"]:
+                        # Store user in session state
+                        st.session_state.user = result["user"]
+                        st.success(f"Welcome back, {result['user'].get('name', 'User')}!")
+                        # Navigate to input page
+                        st.session_state.current_page = "input"
+                        st.rerun()
+                    else:
+                        st.error(result["message"])
+    
+    st.markdown("---")
+    col1, col2, col3 = st.columns([1, 2, 1])
+    with col2:
+        st.markdown("<p style='text-align: center;'>Don't have an account?</p>", unsafe_allow_html=True)
+        if st.button("📝 Sign Up", use_container_width=True):
+            st.session_state.current_page = "signup"
+            st.rerun()
+        if st.button("← Back to Home", use_container_width=True):
+            st.session_state.current_page = "welcome"
+            st.rerun()
+
+
 def render_welcome_page():
     """Render the welcome/home page."""
+    # Check for email verification token in URL parameters
+    query_params = st.query_params
+    if "token" in query_params and "email" in query_params:
+        token = query_params["token"]
+        email = query_params["email"]
+        with st.spinner("Verifying your email..."):
+            result = verify_email_token(email, token)
+            if result["success"]:
+                st.success(result["message"])
+                st.info("You can now log in with your email and password.")
+            else:
+                st.error(result["message"])
+    
     st.markdown('<div class="main-header">💪 Workout Plan Generator</div>', unsafe_allow_html=True)
     st.markdown('<div class="sub-header">Powered by BFS Algorithm</div>', unsafe_allow_html=True)
     
@@ -860,9 +978,31 @@ def render_welcome_page():
     
     col1, col2, col3 = st.columns([1, 2, 1])
     with col2:
-        if st.button("🚀 Get Started", type="primary", use_container_width=True):
-            st.session_state.current_page = "input"
-            st.rerun()
+        # Check if user is already logged in
+        if is_authenticated():
+            user = get_current_user()
+            st.success(f"Welcome back, {user.get('name', user.get('email', 'User'))}!")
+            if st.button("🚀 Continue to Workout Generator", type="primary", use_container_width=True):
+                st.session_state.current_page = "input"
+                st.rerun()
+            if st.button("🔐 Logout", use_container_width=True):
+                logout_user()
+                st.rerun()
+        else:
+            # Show login/signup options
+            if st.button("📝 Sign Up", type="primary", use_container_width=True):
+                st.session_state.current_page = "signup"
+                st.rerun()
+            if st.button("🔐 Login", use_container_width=True):
+                st.session_state.current_page = "login"
+                st.rerun()
+            
+            # Allow guest access
+            st.markdown("---")
+            st.markdown("<p style='text-align: center;'>Or continue as guest</p>", unsafe_allow_html=True)
+            if st.button("🚀 Continue as Guest", use_container_width=True):
+                st.session_state.current_page = "input"
+                st.rerun()
 
 
 def render_input_page():
@@ -872,6 +1012,17 @@ def render_input_page():
     
     # Sidebar
     with st.sidebar:
+        # Show user info if logged in
+        if is_authenticated():
+            user = get_current_user()
+            st.markdown('<p class="sidebar-section-title">👤 Account</p>', unsafe_allow_html=True)
+            st.info(f"**{user.get('name', 'User')}**\n{user.get('email', '')}")
+            if st.button("🔐 Logout", use_container_width=True):
+                logout_user()
+                st.session_state.current_page = "welcome"
+                st.rerun()
+            st.markdown("---")
+        
         st.markdown('<p class="sidebar-section-title">⚙️ Settings</p>', unsafe_allow_html=True)
         
         st.markdown("**💡 Quick Tip**")
@@ -952,6 +1103,29 @@ def render_input_page():
                     st.session_state.user_level = user_level
                     st.session_state.user_goal = user_goal
                     st.session_state.user_equipment = user_equipment
+                    
+                    # Save user preferences if logged in
+                    if is_authenticated():
+                        try:
+                            from user_data import save_user_workout_preferences
+                            user = get_current_user()
+                            user_id = user.get('id') or user.get('email')
+                            workout_location = st.session_state.get('workout_location', 'home')
+                            
+                            save_result = save_user_workout_preferences(
+                                user_id=user_id,
+                                fitness_level=user_level,
+                                fitness_goal=user_goal,
+                                training_days=days,
+                                training_split=split,
+                                workout_location=workout_location,
+                                equipment=user_equipment,
+                                workout_plan=daily_plan
+                            )
+                            # Don't show message here, it will interrupt the flow
+                        except Exception as e:
+                            pass  # Silently fail if saving preferences fails
+                    
                     # Navigate to results page
                     st.session_state.current_page = "results"
                     st.rerun()
@@ -967,6 +1141,17 @@ def render_results_page():
     
     # Sidebar
     with st.sidebar:
+        # Show user info if logged in
+        if is_authenticated():
+            user = get_current_user()
+            st.markdown('<p class="sidebar-section-title">👤 Account</p>', unsafe_allow_html=True)
+            st.info(f"**{user.get('name', 'User')}**\n{user.get('email', '')}")
+            if st.button("🔐 Logout", use_container_width=True):
+                logout_user()
+                st.session_state.current_page = "welcome"
+                st.rerun()
+            st.markdown("---")
+        
         st.markdown('<p class="sidebar-section-title">🎯 Navigation</p>', unsafe_allow_html=True)
         
         if st.button("🔄 Generate New Plan", use_container_width=True):
@@ -1052,9 +1237,18 @@ def main():
     if 'current_page' not in st.session_state:
         st.session_state.current_page = "welcome"
     
+    # Handle email verification from URL
+    query_params = st.query_params
+    if "token" in query_params and "email" in query_params:
+        st.session_state.current_page = "welcome"  # Show welcome page for verification message
+    
     # Render appropriate page based on current_page
     if st.session_state.current_page == "welcome":
         render_welcome_page()
+    elif st.session_state.current_page == "signup":
+        render_signup_page()
+    elif st.session_state.current_page == "login":
+        render_login_page()
     elif st.session_state.current_page == "input":
         render_input_page()
     elif st.session_state.current_page == "results":

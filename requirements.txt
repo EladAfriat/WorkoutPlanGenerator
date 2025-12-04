@@ -3,4 +3,10 @@ networkx>=3.0
 matplotlib>=3.7.0
 requests>=2.31.0
 reportlab>=4.0.0
+supabase>=2.0.0
+python-dotenv>=1.0.0
+bcrypt>=4.0.0
+pyjwt>=2.8.0
+cryptography>=41.0.0
+sendgrid>=6.10.0
 
