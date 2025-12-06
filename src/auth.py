@@ -175,9 +175,19 @@ def create_user(email: str, password: str, name: Optional[str] = None) -> Dict[s
             app_url = os.getenv("APP_URL", "http://localhost:8501")
             email_sent = send_verification_email(email, verification_token, app_url)
             
+            # If email service is not configured, auto-verify the user
+            if not email_sent:
+                # Auto-verify user since email service is not available
+                supabase.table("users").update({
+                    "is_verified": True,
+                    "verification_token": None,
+                    "token_expiry": None,
+                    "verified_at": datetime.utcnow().isoformat()
+                }).eq("id", user_id).execute()
+            
             return {
                 "success": True,
-                "message": "Account created! Please check your email for verification.",
+                "message": "Account created! Please check your email for verification." if email_sent else "Account created! You can now log in.",
                 "user_id": user_id,
                 "email_sent": email_sent
             }
@@ -315,11 +325,23 @@ def login_user(email: str, password: str) -> Dict[str, Any]:
             return {"success": False, "message": "Invalid email or password"}
         
         # Check if email is verified
-        if not user.get("is_verified"):
+        # If email service is not configured, allow login even if not verified
+        sendgrid_configured = bool(os.getenv("SENDGRID_API_KEY"))
+        if not user.get("is_verified") and sendgrid_configured:
             return {
                 "success": False,
                 "message": "Please verify your email before logging in. Check your inbox for the verification link."
             }
+        
+        # Auto-verify if email service is not configured
+        if not user.get("is_verified") and not sendgrid_configured:
+            supabase.table("users").update({
+                "is_verified": True,
+                "verification_token": None,
+                "token_expiry": None,
+                "verified_at": datetime.utcnow().isoformat()
+            }).eq("id", user["id"]).execute()
+            user["is_verified"] = True
         
         # Return user data (without password)
         user_data = {

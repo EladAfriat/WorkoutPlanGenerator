@@ -904,7 +904,7 @@ def render_signup_page():
                         if result.get("email_sent"):
                             st.info("📧 Check your email for verification link. You can sign up again after verifying.")
                         else:
-                            st.warning("⚠️ Email service not configured. Account created but email not sent.")
+                            st.info("✅ Account created! Email service not configured, so your account is automatically verified. You can log in now!")
                         # Set flag to show login button after form
                         st.session_state.show_login_after_signup = True
                     else:
