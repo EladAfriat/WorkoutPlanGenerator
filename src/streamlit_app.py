@@ -418,11 +418,17 @@ def render_user_questions():
 def render_exercise_details(exercise_name: str, exercise_data: Dict[str, Any]):
     """
     Render exercise details in an expandable section.
+    Only available to logged-in users.
     
     Args:
         exercise_name: Name of the exercise
         exercise_data: Exercise data dictionary
     """
+    # Only show details to authenticated users
+    if not is_authenticated():
+        st.info("🔒 Sign up or login to unlock exercise details, tips, and video tutorials!")
+        return
+    
     has_details = any(key in exercise_data for key in ['instructions', 'tips', 'common_mistakes'])
     
     if not has_details:
@@ -615,14 +621,17 @@ def render_workout_plan(daily_plan, user_level, user_goal, exercises, goal_set_r
                             """, unsafe_allow_html=True)
                         
                         with col_buttons:
-                            # Video button
-                            if ex_name in exercises and exercises[ex_name].get('video'):
+                            # Video button - only for logged-in users
+                            if is_authenticated() and ex_name in exercises and exercises[ex_name].get('video'):
                                 video_url = exercises[ex_name]['video']
                                 video_key = f"{exercise_key}_video"
                                 st.markdown(f'<a href="{video_url}" target="_blank" class="video-button">🎥 Video</a>', unsafe_allow_html=True)
+                            elif ex_name in exercises and exercises[ex_name].get('video'):
+                                # Show locked icon for guests
+                                st.markdown('<span title="Sign up to unlock video tutorials">🔒</span>', unsafe_allow_html=True)
                             
-                            # Details button
-                            if ex_name in exercises and any(key in exercises[ex_name] 
+                            # Details button - only for logged-in users
+                            if is_authenticated() and ex_name in exercises and any(key in exercises[ex_name] 
                                                            for key in ['instructions', 'tips', 'common_mistakes']):
                                 details_key = f"{exercise_key}_details"
                                 if st.button("ℹ️", key=details_key):
@@ -632,6 +641,10 @@ def render_workout_plan(daily_plan, user_level, user_goal, exercises, goal_set_r
                                     else:
                                         st.session_state.selected_exercise = ex_name
                                     st.rerun()
+                            elif ex_name in exercises and any(key in exercises[ex_name] 
+                                                           for key in ['instructions', 'tips', 'common_mistakes']):
+                                # Show locked icon for guests
+                                st.markdown('<span title="Sign up to unlock exercise details">🔒</span>', unsafe_allow_html=True)
                         
                         # Show exercise details if selected
                         if 'selected_exercise' in st.session_state and st.session_state.selected_exercise == ex_name:
@@ -963,13 +976,35 @@ def render_welcome_page():
     if "token" in query_params and "email" in query_params:
         token = query_params["token"]
         email = query_params["email"]
-        with st.spinner("Verifying your email..."):
-            result = verify_email_token(email, token)
-            if result["success"]:
+        
+        # Create a unique key for this verification attempt to process it only once
+        verification_key = f"verified_{email}_{token}"
+        
+        # Only process verification if we haven't processed this token/email combination before
+        if verification_key not in st.session_state:
+            st.session_state[verification_key] = True  # Mark as processed
+            
+            with st.spinner("Verifying your email..."):
+                result = verify_email_token(email, token)
+                st.session_state['last_verification_result'] = result
+                
+                # Clear query parameters from URL after processing
+                new_params = dict(query_params)
+                new_params.pop("token", None)
+                new_params.pop("email", None)
+                # Clear all params and set new ones (without token/email)
+                st.query_params.clear()
+                if new_params:
+                    st.query_params.update(new_params)
+        
+        # Display verification result (from cache if already processed)
+        if 'last_verification_result' in st.session_state:
+            result = st.session_state['last_verification_result']
+            if result.get("success"):
                 st.success(result["message"])
                 st.info("You can now log in with your email and password.")
             else:
-                st.error(result["message"])
+                st.error(result.get("message", "Verification failed."))
     
     st.markdown('<div class="main-header">💪 Workout Plan Generator</div>', unsafe_allow_html=True)
     st.markdown('<div class="sub-header">Powered by BFS Algorithm</div>', unsafe_allow_html=True)
@@ -997,16 +1032,30 @@ def render_welcome_page():
                 st.session_state.current_page = "login"
                 st.rerun()
             
-            # Allow guest access
+            # Require signup/login - no guest access
             st.markdown("---")
-            st.markdown("<p style='text-align: center;'>Or continue as guest</p>", unsafe_allow_html=True)
-            if st.button("🚀 Continue as Guest", use_container_width=True):
-                st.session_state.current_page = "input"
-                st.rerun()
+            st.info("🔒 **Sign up or login required** to access the workout generator and unlock exercise details, tips, and video tutorials!")
 
 
 def render_input_page():
     """Render the user input page."""
+    # Require authentication to access this page
+    if not is_authenticated():
+        st.warning("🔒 Please sign up or login to access the workout generator!")
+        st.info("Create a free account to unlock exercise details, tips, and video tutorials.")
+        col1, col2, col3 = st.columns([1, 2, 1])
+        with col2:
+            if st.button("📝 Sign Up", type="primary", use_container_width=True):
+                st.session_state.current_page = "signup"
+                st.rerun()
+            if st.button("🔐 Login", use_container_width=True):
+                st.session_state.current_page = "login"
+                st.rerun()
+            if st.button("← Back to Home", use_container_width=True):
+                st.session_state.current_page = "welcome"
+                st.rerun()
+        return  # Stop rendering the rest of the page
+    
     # Load data (will use web_source from sidebar if provided)
     load_data(st.session_state.get('web_data_source'))
     
@@ -1136,6 +1185,23 @@ def render_input_page():
 
 def render_results_page():
     """Render the workout plan results page."""
+    # Require authentication to view results
+    if not is_authenticated():
+        st.warning("🔒 Please sign up or login to view workout plans!")
+        st.info("Create a free account to unlock exercise details, tips, and video tutorials.")
+        col1, col2, col3 = st.columns([1, 2, 1])
+        with col2:
+            if st.button("📝 Sign Up", type="primary", use_container_width=True):
+                st.session_state.current_page = "signup"
+                st.rerun()
+            if st.button("🔐 Login", use_container_width=True):
+                st.session_state.current_page = "login"
+                st.rerun()
+            if st.button("← Back to Home", use_container_width=True):
+                st.session_state.current_page = "welcome"
+                st.rerun()
+        return  # Stop rendering the rest of the page
+    
     # Load data if not already loaded (will use web_source from session state if provided)
     load_data(st.session_state.get('web_data_source'))
     
@@ -1237,10 +1303,17 @@ def main():
     if 'current_page' not in st.session_state:
         st.session_state.current_page = "welcome"
     
-    # Handle email verification from URL
+    # Handle email verification from URL - only redirect on first detection, not every rerun
     query_params = st.query_params
     if "token" in query_params and "email" in query_params:
-        st.session_state.current_page = "welcome"  # Show welcome page for verification message
+        token = query_params.get("token")
+        email = query_params.get("email")
+        verification_redirect_key = f"verification_redirect_{email}_{token}"
+        
+        # Only redirect if we haven't seen this verification before
+        if verification_redirect_key not in st.session_state:
+            st.session_state[verification_redirect_key] = True
+            st.session_state.current_page = "welcome"  # Show welcome page for verification message
     
     # Render appropriate page based on current_page
     if st.session_state.current_page == "welcome":
