@@ -905,13 +905,20 @@ def render_signup_page():
                             st.info("📧 Check your email for verification link. You can sign up again after verifying.")
                         else:
                             st.warning("⚠️ Email service not configured. Account created but email not sent.")
-                        # Go back to login after a delay
-                        st.markdown("<br>", unsafe_allow_html=True)
-                        if st.button("Go to Login"):
-                            st.session_state.current_page = "login"
-                            st.rerun()
+                        # Set flag to show login button after form
+                        st.session_state.show_login_after_signup = True
                     else:
                         st.error(result["message"])
+    
+    # Show login button after successful signup (outside the form)
+    if st.session_state.get("show_login_after_signup", False):
+        st.markdown("<br>", unsafe_allow_html=True)
+        col1, col2, col3 = st.columns([1, 2, 1])
+        with col2:
+            if st.button("🔐 Go to Login", type="primary", use_container_width=True):
+                st.session_state.show_login_after_signup = False
+                st.session_state.current_page = "login"
+                st.rerun()
     
     st.markdown("---")
     col1, col2, col3 = st.columns([1, 2, 1])
