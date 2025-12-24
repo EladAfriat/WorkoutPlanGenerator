@@ -31,7 +31,8 @@ from data_handler import load_exercises_data, get_exercises_dict, get_goal_set_r
 from bfs_algorithm import bfs_reserve_workout_plan
 from auth import (
     create_user, login_user, verify_email_token, 
-    get_current_user, logout_user, is_authenticated
+    get_current_user, logout_user, is_authenticated,
+    request_password_reset, reset_password_with_code
 )
 from user_data import save_user_workout_preferences
 
@@ -971,7 +972,131 @@ def render_login_page():
         if st.button("📝 Sign Up", use_container_width=True):
             st.session_state.current_page = "signup"
             st.rerun()
+        st.markdown("<br>", unsafe_allow_html=True)
+        if st.button("🔑 Forgot Password?", use_container_width=True):
+            st.session_state.current_page = "forgot_password"
+            st.rerun()
         if st.button("← Back to Home", use_container_width=True):
+            st.session_state.current_page = "welcome"
+            st.rerun()
+
+
+def render_forgot_password_page():
+    """Render the forgot password page."""
+    st.markdown('<div class="main-header">🔑 Reset Password</div>', unsafe_allow_html=True)
+    
+    # Check if we're in reset mode (code entry)
+    if st.session_state.get("password_reset_mode") == "enter_code":
+        email = st.session_state.get("reset_email", "")
+        reset_code = st.session_state.get("reset_code", "")
+        email_sent = st.session_state.get("email_sent", False)
+        
+        st.markdown('<div class="sub-header">Enter your reset code</div>', unsafe_allow_html=True)
+        
+        if email_sent:
+            st.success(f"📧 Password reset code sent to **{email}**")
+            st.info("Please check your email for the 6-digit reset code.")
+        else:
+            st.info(f"📧 Reset code generated for **{email}**")
+            # Display the reset code prominently if email wasn't sent
+            st.markdown("---")
+            st.markdown("### Your Reset Code:")
+            st.markdown(f"<h1 style='text-align: center; color: #1f77b4; font-size: 3rem; letter-spacing: 0.5rem;'>{reset_code}</h1>", unsafe_allow_html=True)
+            st.warning("⚠️ **Save this code!** You'll need it to reset your password. It expires in 1 hour.")
+        
+        st.markdown("---")
+        
+        with st.form("reset_password_form"):
+            st.text_input("Email Address", value=email, disabled=True)
+            code = st.text_input("Reset Code", placeholder="Enter the 6-digit code", help="Enter the code from your email" if email_sent else "Enter the code shown above")
+            new_password = st.text_input("New Password", type="password", placeholder="Enter your new password")
+            confirm_password = st.text_input("Confirm New Password", type="password", placeholder="Confirm your new password")
+            
+            col1, col2, col3 = st.columns([1, 2, 1])
+            with col2:
+                submitted = st.form_submit_button("🔑 Reset Password", type="primary", use_container_width=True)
+            
+            if submitted:
+                if not code or not new_password or not confirm_password:
+                    st.error("Please fill in all fields")
+                elif new_password != confirm_password:
+                    st.error("Passwords do not match")
+                elif len(new_password) < 6:
+                    st.error("Password must be at least 6 characters")
+                elif len(code) != 6 or not code.isdigit():
+                    st.error("Reset code must be 6 digits")
+                else:
+                    with st.spinner("Resetting password..."):
+                        result = reset_password_with_code(email, code, new_password)
+                        
+                        if result["success"]:
+                            st.success(result["message"])
+                            st.session_state.password_reset_mode = None
+                            st.session_state.reset_email = None
+                            st.session_state.reset_code = None
+                            st.session_state.email_sent = None
+                            st.info("You can now log in with your new password.")
+                            if st.button("🔐 Go to Login", type="primary", use_container_width=True):
+                                st.session_state.current_page = "login"
+                                st.rerun()
+                        else:
+                            st.error(result["message"])
+    else:
+        # Request reset code
+        st.markdown('<div class="sub-header">Enter your email to receive a reset code</div>', unsafe_allow_html=True)
+        st.info("💡 A 6-digit reset code will be sent to your email address.")
+        
+        with st.form("forgot_password_form"):
+            email = st.text_input("Email Address", placeholder="your.email@example.com")
+            
+            col1, col2, col3 = st.columns([1, 2, 1])
+            with col2:
+                submitted = st.form_submit_button("📧 Send Reset Code", type="primary", use_container_width=True)
+            
+            if submitted:
+                if not email:
+                    st.error("Please enter your email address")
+                else:
+                    with st.spinner("Sending reset code..."):
+                        result = request_password_reset(email)
+                        
+                        if result["success"]:
+                            if result.get("email_sent"):
+                                # Email sent successfully
+                                st.success(result["message"])
+                                st.session_state.password_reset_mode = "enter_code"
+                                st.session_state.reset_email = result["email"]
+                                st.session_state.email_sent = True
+                                st.rerun()
+                            elif result.get("reset_code"):
+                                # Email not sent, show code on screen
+                                st.success(result["message"])
+                                st.session_state.password_reset_mode = "enter_code"
+                                st.session_state.reset_email = result["email"]
+                                st.session_state.reset_code = result["reset_code"]
+                                st.session_state.email_sent = False
+                                st.rerun()
+                            else:
+                                # Email doesn't exist (security - don't reveal)
+                                st.info(result["message"])
+                        else:
+                            st.error(result["message"])
+    
+    st.markdown("---")
+    col1, col2, col3 = st.columns([1, 2, 1])
+    with col2:
+        if st.button("← Back to Login", use_container_width=True):
+            st.session_state.password_reset_mode = None
+            st.session_state.reset_email = None
+            st.session_state.reset_code = None
+            st.session_state.email_sent = None
+            st.session_state.current_page = "login"
+            st.rerun()
+        if st.button("🏠 Back to Home", use_container_width=True):
+            st.session_state.password_reset_mode = None
+            st.session_state.reset_email = None
+            st.session_state.reset_code = None
+            st.session_state.email_sent = None
             st.session_state.current_page = "welcome"
             st.rerun()
 
@@ -1008,10 +1133,11 @@ def render_welcome_page():
         if 'last_verification_result' in st.session_state:
             result = st.session_state['last_verification_result']
             if result.get("success"):
-                st.success(result["message"])
+                st.success("✅ " + result["message"])
                 st.info("You can now log in with your email and password.")
             else:
-                st.error(result.get("message", "Verification failed."))
+                st.error("❌ " + result.get("message", "Verification failed. Please try signing up again or contact support."))
+                st.info("💡 If you didn't receive an email, your account may have been auto-verified. Try logging in.")
     
     st.markdown('<div class="main-header">💪 Workout Plan Generator</div>', unsafe_allow_html=True)
     st.markdown('<div class="sub-header">Powered by BFS Algorithm</div>', unsafe_allow_html=True)
@@ -1329,6 +1455,8 @@ def main():
         render_signup_page()
     elif st.session_state.current_page == "login":
         render_login_page()
+    elif st.session_state.current_page == "forgot_password":
+        render_forgot_password_page()
     elif st.session_state.current_page == "input":
         render_input_page()
     elif st.session_state.current_page == "results":
