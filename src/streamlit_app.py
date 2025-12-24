@@ -995,14 +995,20 @@ def render_forgot_password_page():
         
         if email_sent:
             st.success(f"📧 Password reset code sent to **{email}**")
-            st.info("Please check your email for the 6-digit reset code.")
+            st.info("Please check your email (including spam folder) for the 6-digit reset code.")
         else:
-            st.info(f"📧 Reset code generated for **{email}**")
-            # Display the reset code prominently if email wasn't sent
-            st.markdown("---")
-            st.markdown("### Your Reset Code:")
-            st.markdown(f"<h1 style='text-align: center; color: #1f77b4; font-size: 3rem; letter-spacing: 0.5rem;'>{reset_code}</h1>", unsafe_allow_html=True)
-            st.warning("⚠️ **Save this code!** You'll need it to reset your password. It expires in 1 hour.")
+            # Only show code if email service is NOT configured (fallback mode)
+            if reset_code:
+                st.info(f"📧 Reset code generated for **{email}**")
+                # Display the reset code prominently if email wasn't sent (fallback only)
+                st.markdown("---")
+                st.markdown("### Your Reset Code:")
+                st.markdown(f"<h1 style='text-align: center; color: #1f77b4; font-size: 3rem; letter-spacing: 0.5rem;'>{reset_code}</h1>", unsafe_allow_html=True)
+                st.warning("⚠️ **Save this code!** You'll need it to reset your password. It expires in 1 hour.")
+            else:
+                # Email service is configured but failed - don't show code
+                st.error("❌ Email service is configured but failed to send. Please check your email or try again.")
+                st.info("💡 If you didn't receive an email, check your spam folder or contact support.")
         
         st.markdown("---")
         
