@@ -1069,7 +1069,7 @@ def render_forgot_password_page():
                                 st.session_state.email_sent = True
                                 st.rerun()
                             elif result.get("reset_code"):
-                                # Email not sent, show code on screen
+                                # Email not configured - show code on screen (fallback only)
                                 st.success(result["message"])
                                 st.session_state.password_reset_mode = "enter_code"
                                 st.session_state.reset_email = result["email"]
@@ -1080,7 +1080,9 @@ def render_forgot_password_page():
                                 # Email doesn't exist (security - don't reveal)
                                 st.info(result["message"])
                         else:
+                            # Email failed - show error, don't show code
                             st.error(result["message"])
+                            st.info("💡 Please check your email (including spam folder). If you didn't receive it, the code may have been sent. Try entering the code from your email.")
     
     st.markdown("---")
     col1, col2, col3 = st.columns([1, 2, 1])

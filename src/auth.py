@@ -541,20 +541,20 @@ def request_password_reset(email: str) -> Dict[str, Any]:
             # Check if SendGrid is configured
             sendgrid_configured = bool(os.getenv("SENDGRID_API_KEY"))
             if sendgrid_configured:
-                # SendGrid is configured but email failed - show error with fallback code
+                # SendGrid is configured but email failed - DO NOT show code, ask user to check email or try again
                 return {
-                    "success": True,  # Still allow reset with code shown
-                    "message": f"⚠️ Failed to send email to {email.lower()}. Your reset code is shown below. Please check your SendGrid configuration.",
-                    "reset_code": reset_code,  # Show code as fallback
+                    "success": False,  # Fail the request - don't show code
+                    "message": f"❌ Failed to send email to {email.lower()}. Please check your email (including spam folder) or try again. If the problem persists, check your SendGrid configuration.",
+                    "reset_code": None,  # NEVER show code if SendGrid is configured
                     "email_sent": False,
                     "email": email.lower()
                 }
             else:
-                # SendGrid not configured - show code on screen
+                # SendGrid not configured - only then show code on screen as fallback
                 return {
                     "success": True,
                     "message": f"⚠️ Email service not configured. Your reset code is shown below.",
-                    "reset_code": reset_code,  # Show code if email not configured
+                    "reset_code": reset_code,  # Show code ONLY if email service not configured
                     "email_sent": False,
                     "email": email.lower()
                 }
