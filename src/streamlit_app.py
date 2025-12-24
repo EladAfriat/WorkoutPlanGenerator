@@ -1012,41 +1012,53 @@ def render_forgot_password_page():
         
         st.markdown("---")
         
-        with st.form("reset_password_form"):
-            st.text_input("Email Address", value=email, disabled=True)
-            code = st.text_input("Reset Code", placeholder="Enter the 6-digit code", help="Enter the code from your email" if email_sent else "Enter the code shown above")
-            new_password = st.text_input("New Password", type="password", placeholder="Enter your new password")
-            confirm_password = st.text_input("Confirm New Password", type="password", placeholder="Confirm your new password")
-            
+        # Check if password was successfully reset (from previous form submission)
+        if st.session_state.get("password_reset_success"):
+            st.success("✅ Password reset successfully! You can now log in with your new password.")
+            st.info("You can now log in with your new password.")
             col1, col2, col3 = st.columns([1, 2, 1])
             with col2:
-                submitted = st.form_submit_button("🔑 Reset Password", type="primary", use_container_width=True)
-            
-            if submitted:
-                if not code or not new_password or not confirm_password:
-                    st.error("Please fill in all fields")
-                elif new_password != confirm_password:
-                    st.error("Passwords do not match")
-                elif len(new_password) < 6:
-                    st.error("Password must be at least 6 characters")
-                elif len(code) != 6 or not code.isdigit():
-                    st.error("Reset code must be 6 digits")
-                else:
-                    with st.spinner("Resetting password..."):
-                        result = reset_password_with_code(email, code, new_password)
-                        
-                        if result["success"]:
-                            st.success(result["message"])
-                            st.session_state.password_reset_mode = None
-                            st.session_state.reset_email = None
-                            st.session_state.reset_code = None
-                            st.session_state.email_sent = None
-                            st.info("You can now log in with your new password.")
-                            if st.button("🔐 Go to Login", type="primary", use_container_width=True):
-                                st.session_state.current_page = "login"
+                if st.button("🔐 Go to Login", type="primary", use_container_width=True):
+                    st.session_state.password_reset_success = False
+                    st.session_state.password_reset_mode = None
+                    st.session_state.reset_email = None
+                    st.session_state.reset_code = None
+                    st.session_state.email_sent = None
+                    st.session_state.current_page = "login"
+                    st.rerun()
+        else:
+            with st.form("reset_password_form"):
+                st.text_input("Email Address", value=email, disabled=True)
+                code = st.text_input("Reset Code", placeholder="Enter the 6-digit code", help="Enter the code from your email" if email_sent else "Enter the code shown above")
+                new_password = st.text_input("New Password", type="password", placeholder="Enter your new password")
+                confirm_password = st.text_input("Confirm New Password", type="password", placeholder="Confirm your new password")
+                
+                col1, col2, col3 = st.columns([1, 2, 1])
+                with col2:
+                    submitted = st.form_submit_button("🔑 Reset Password", type="primary", use_container_width=True)
+                
+                if submitted:
+                    if not code or not new_password or not confirm_password:
+                        st.error("Please fill in all fields")
+                    elif new_password != confirm_password:
+                        st.error("Passwords do not match")
+                    elif len(new_password) < 6:
+                        st.error("Password must be at least 6 characters")
+                    elif len(code) != 6 or not code.isdigit():
+                        st.error("Reset code must be 6 digits")
+                    else:
+                        with st.spinner("Resetting password..."):
+                            result = reset_password_with_code(email, code, new_password)
+                            
+                            if result["success"]:
+                                st.session_state.password_reset_success = True
+                                st.session_state.password_reset_mode = None
+                                st.session_state.reset_email = None
+                                st.session_state.reset_code = None
+                                st.session_state.email_sent = None
                                 st.rerun()
-                        else:
-                            st.error(result["message"])
+                            else:
+                                st.error(result["message"])
     else:
         # Request reset code
         st.markdown('<div class="sub-header">Enter your email to receive a reset code</div>', unsafe_allow_html=True)
