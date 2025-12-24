@@ -7,7 +7,7 @@ import streamlit as st
 import bcrypt
 import secrets
 import string
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
 from typing import Optional, Dict, Any
 import hashlib
 
@@ -460,9 +460,23 @@ def send_password_reset_email(email: str, reset_code: str) -> bool:
         
         sg = SendGridAPIClient(sendgrid_api_key)
         response = sg.send(message)
-        return response.status_code == 202
+        
+        if response.status_code == 202:
+            return True
+        else:
+            # Log the error for debugging
+            error_body = getattr(response, 'body', 'No error details')
+            st.error(f"SendGrid returned status code {response.status_code}. Check SendGrid dashboard for details.")
+            return False
     except Exception as e:
-        st.error(f"Error sending password reset email: {e}")
+        # Log detailed error for debugging
+        error_msg = str(e)
+        st.error(f"Error sending password reset email: {error_msg}")
+        # Check common issues
+        if "API key" in error_msg.lower() or "unauthorized" in error_msg.lower():
+            st.warning("⚠️ SendGrid API key may be invalid. Check your Streamlit Cloud secrets.")
+        elif "sender" in error_msg.lower() or "from_email" in error_msg.lower():
+            st.warning("⚠️ SendGrid sender email may not be verified. Check your SendGrid account.")
         return False
 
 
@@ -518,20 +532,32 @@ def request_password_reset(email: str) -> Dict[str, Any]:
         if email_sent:
             return {
                 "success": True,
-                "message": f"Password reset code sent to {email.lower()}. Please check your email.",
+                "message": f"✅ Password reset code sent to {email.lower()}. Please check your email (including spam folder).",
                 "reset_code": None,  # Don't show code if email sent
                 "email_sent": True,
                 "email": email.lower()
             }
         else:
-            # Fallback: return code to display on screen
-            return {
-                "success": True,
-                "message": f"Password reset code generated for {email.lower()}",
-                "reset_code": reset_code,  # Show code if email not sent
-                "email_sent": False,
-                "email": email.lower()
-            }
+            # Check if SendGrid is configured
+            sendgrid_configured = bool(os.getenv("SENDGRID_API_KEY"))
+            if sendgrid_configured:
+                # SendGrid is configured but email failed - show error with fallback code
+                return {
+                    "success": True,  # Still allow reset with code shown
+                    "message": f"⚠️ Failed to send email to {email.lower()}. Your reset code is shown below. Please check your SendGrid configuration.",
+                    "reset_code": reset_code,  # Show code as fallback
+                    "email_sent": False,
+                    "email": email.lower()
+                }
+            else:
+                # SendGrid not configured - show code on screen
+                return {
+                    "success": True,
+                    "message": f"⚠️ Email service not configured. Your reset code is shown below.",
+                    "reset_code": reset_code,  # Show code if email not configured
+                    "email_sent": False,
+                    "email": email.lower()
+                }
         
     except Exception as e:
         return {"success": False, "message": f"Error generating reset code: {str(e)}"}
@@ -576,9 +602,27 @@ def reset_password_with_code(email: str, code: str, new_password: str) -> Dict[s
         
         # Check if code expired
         if user.get("token_expiry"):
-            expiry = datetime.fromisoformat(user["token_expiry"].replace('Z', '+00:00'))
-            if datetime.utcnow() > expiry:
-                return {"success": False, "message": "Reset code has expired. Please request a new one."}
+            expiry_str = user["token_expiry"]
+            try:
+                # Handle both timezone-aware and timezone-naive formats
+                if expiry_str.endswith('Z'):
+                    expiry = datetime.fromisoformat(expiry_str.replace('Z', '+00:00'))
+                elif '+' in expiry_str or expiry_str.count('-') > 2:
+                    expiry = datetime.fromisoformat(expiry_str)
+                else:
+                    # Timezone-naive format, assume UTC
+                    expiry = datetime.fromisoformat(expiry_str)
+                
+                # Make both timezone-aware for comparison (use UTC)
+                now = datetime.now(timezone.utc)
+                if expiry.tzinfo is None:
+                    expiry = expiry.replace(tzinfo=timezone.utc)
+                
+                if now > expiry:
+                    return {"success": False, "message": "Reset code has expired. Please request a new one."}
+            except (ValueError, AttributeError) as e:
+                # If parsing fails, log but don't block reset (might be old format)
+                st.warning(f"Could not parse expiry date: {e}")
         
         # Update password
         hashed_password = hash_password(new_password)
