@@ -259,9 +259,27 @@ def verify_email_token(email: str, token: str) -> Dict[str, Any]:
         
         # Check if token expired
         if user.get("token_expiry"):
-            expiry = datetime.fromisoformat(user["token_expiry"].replace('Z', '+00:00'))
-            if datetime.utcnow() > expiry:
-                return {"success": False, "message": "Verification link has expired"}
+            expiry_str = user["token_expiry"]
+            try:
+                # Handle both timezone-aware and timezone-naive formats
+                if expiry_str.endswith('Z'):
+                    expiry = datetime.fromisoformat(expiry_str.replace('Z', '+00:00'))
+                elif '+' in expiry_str or expiry_str.count('-') > 2:
+                    expiry = datetime.fromisoformat(expiry_str)
+                else:
+                    # Timezone-naive format, assume UTC
+                    expiry = datetime.fromisoformat(expiry_str)
+                
+                # Make both timezone-aware for comparison (use UTC)
+                now = datetime.now(timezone.utc)
+                if expiry.tzinfo is None:
+                    expiry = expiry.replace(tzinfo=timezone.utc)
+                
+                if now > expiry:
+                    return {"success": False, "message": "Verification link has expired"}
+            except (ValueError, AttributeError) as e:
+                # If parsing fails, log but don't block verification (might be old format)
+                st.warning(f"Could not parse expiry date: {e}")
         
         # Check if already verified
         if user.get("is_verified"):
