@@ -1168,6 +1168,12 @@ def render_welcome_page():
     
     st.markdown('<div class="main-header">💪 Workout Plan Generator</div>', unsafe_allow_html=True)
     st.markdown('<div class="sub-header">Powered by BFS Algorithm</div>', unsafe_allow_html=True)
+
+    logo_path = (Path(__file__).resolve().parent.parent / "LOGO.jpeg")
+    if logo_path.exists():
+        col1, col2, col3 = st.columns([1, 2, 1])
+        with col2:
+            st.image(str(logo_path), use_container_width=True)
     
     st.markdown("<br><br>", unsafe_allow_html=True)
     
