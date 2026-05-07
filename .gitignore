@@ -46,6 +46,7 @@ Thumbs.db
 *.png
 *.jpg
 *.jpeg
+!LOGO.jpeg
 workout_bfs_graph.png
 
 # Temporary files
